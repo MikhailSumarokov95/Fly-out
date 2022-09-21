@@ -1,0 +1,1059 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.7f1 (24e8595d6d43) revision 2418777'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19044) 64bit Professional' Language: 'ru' Physical Memory: 4087 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.7f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/ykpon/Desktop/Unity/Fly-out/Fly out
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+49804
+Successfully changed project path to: C:/Users/ykpon/Desktop/Unity/Fly-out/Fly out
+C:/Users/ykpon/Desktop/Unity/Fly-out/Fly out
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 165.99 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.7f1 (24e8595d6d43)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/ykpon/Desktop/Unity/Fly-out/Fly out/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTS 450 (ID=0x1245)
+    Vendor:   NVIDIA
+    VRAM:     979 MB
+    Driver:   23.21.13.8813
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56928
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.025298 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 134.90 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.474 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1475ms)
+		BeginReloadAssembly (382ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (888ms)
+			LoadAssemblies (379ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (203ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (54ms)
+			SetupLoadedEditorAssemblies (536ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (113ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (135ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (204ms)
+				ProcessInitializeOnLoadMethodAttributes (82ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.010916 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\ykpon\Desktop\Unity\Fly-out\Fly out\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ykpon\Desktop\Unity\Fly-out\Fly out\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.09 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.246 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2247ms)
+		BeginReloadAssembly (327ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (12ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (140ms)
+		EndReloadAssembly (1687ms)
+			LoadAssemblies (313ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (533ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (90ms)
+			SetupLoadedEditorAssemblies (700ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (29ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (172ms)
+				ProcessInitializeOnLoadAttributes (427ms)
+				ProcessInitializeOnLoadMethodAttributes (55ms)
+				AfterProcessingInitializeOnLoad (15ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 1.78 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3377 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 27 unused Assets / (111.4 KB). Loaded Objects now: 3836.
+Memory consumption went from 116.1 MB to 116.0 MB.
+Total: 7.208200 ms (FindLiveObjects: 0.751900 ms CreateObjectMapping: 0.229500 ms MarkObjects: 6.024500 ms  DeleteObjects: 0.200100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 8874.524677 seconds.
+  path: Assets/CharacterPack Lowpoly (FREE)/Prefabs/character2 (2).prefab
+  artifactKey: Guid(4f2e058a94bca0742939d136d2b88baf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CharacterPack Lowpoly (FREE)/Prefabs/character2 (2).prefab using Guid(4f2e058a94bca0742939d136d2b88baf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c222493012ae7194114c131c0f3e12b3') in 0.545972 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000059 seconds.
+  path: Assets/CharacterPack Lowpoly (FREE)/Prefabs/character1.prefab
+  artifactKey: Guid(7a3e76d3ba476dc43adbe00faa26df0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CharacterPack Lowpoly (FREE)/Prefabs/character1.prefab using Guid(7a3e76d3ba476dc43adbe00faa26df0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5445e17e7511c82b6f42351cc1f22ee') in 0.041641 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000103 seconds.
+  path: Assets/CharacterPack Lowpoly (FREE)/Prefabs/character2 (1).prefab
+  artifactKey: Guid(1f05b36eff9f0c941a187ddef4a43a0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CharacterPack Lowpoly (FREE)/Prefabs/character2 (1).prefab using Guid(1f05b36eff9f0c941a187ddef4a43a0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b7a28502078a840abcf8a33ea19b11f') in 0.039050 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/CharacterPack Lowpoly (FREE)/Prefabs/character2.prefab
+  artifactKey: Guid(e7707aec2cc25b449a610f5087a64251) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CharacterPack Lowpoly (FREE)/Prefabs/character2.prefab using Guid(e7707aec2cc25b449a610f5087a64251) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2f7995efa58c7929c19ab92ce8041af') in 0.097530 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000072 seconds.
+  path: Assets/CharacterPack Lowpoly (FREE)/Prefabs/character1 (2).prefab
+  artifactKey: Guid(73b960d954b4d0e41833cf51608d11e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CharacterPack Lowpoly (FREE)/Prefabs/character1 (2).prefab using Guid(73b960d954b4d0e41833cf51608d11e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd18db075be1b0fa0328a5a81eb21bf37') in 0.043147 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/CharacterPack Lowpoly (FREE)/Prefabs/character2 (1) 1.prefab
+  artifactKey: Guid(d0760a66a63a36740b36de46ef865962) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CharacterPack Lowpoly (FREE)/Prefabs/character2 (1) 1.prefab using Guid(d0760a66a63a36740b36de46ef865962) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4248fd41794efb2efdfea12de54e325f') in 0.037037 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/CharacterPack Lowpoly (FREE)/Prefabs/character1 (1).prefab
+  artifactKey: Guid(a15133d8898d400449f7c21aef33e511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CharacterPack Lowpoly (FREE)/Prefabs/character1 (1).prefab using Guid(a15133d8898d400449f7c21aef33e511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec54130e000356ef5bae5f9e8d0621b5') in 0.046706 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 100.691230 seconds.
+  path: Assets/BEDRILL/Track_Environment_Free/Prefabs/Arch_01_free_obs.prefab
+  artifactKey: Guid(63f7e3a5ea486a9438b4cd3142c7dc92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BEDRILL/Track_Environment_Free/Prefabs/Arch_01_free_obs.prefab using Guid(63f7e3a5ea486a9438b4cd3142c7dc92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22f7a26c9a675a7de8671f7e27bf44b3') in 0.053366 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/BEDRILL/Track_Environment_Free/Prefabs/Sign_free_obs.prefab
+  artifactKey: Guid(fca05fc86b15f0d4da25ed7793db4384) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BEDRILL/Track_Environment_Free/Prefabs/Sign_free_obs.prefab using Guid(fca05fc86b15f0d4da25ed7793db4384) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f22ab949d2c84f7cc00f413c2fec27cd') in 0.050677 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/BEDRILL/Track_Environment_Free/Prefabs/Traffic_light_free_obs.prefab
+  artifactKey: Guid(99c5fe0ab7d0f8045a119a49343475d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BEDRILL/Track_Environment_Free/Prefabs/Traffic_light_free_obs.prefab using Guid(99c5fe0ab7d0f8045a119a49343475d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57ca384107a63d580f5444f81565337b') in 0.047317 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000076 seconds.
+  path: Assets/BEDRILL/Track_Environment_Free/Prefabs/Fence_concrete_free_obs.prefab
+  artifactKey: Guid(7f98c8176bfca7347b11006aac2c90ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BEDRILL/Track_Environment_Free/Prefabs/Fence_concrete_free_obs.prefab using Guid(7f98c8176bfca7347b11006aac2c90ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b38f24937b1eab8d471c973e7345db45') in 0.046342 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/BEDRILL/Track_Environment_Free/Prefabs/Tire_free_obs.prefab
+  artifactKey: Guid(0a9f73a18c612c34a9773c0dd0fae0ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BEDRILL/Track_Environment_Free/Prefabs/Tire_free_obs.prefab using Guid(0a9f73a18c612c34a9773c0dd0fae0ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56e54a40f16ee481105c1938d024de52') in 0.053129 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/BEDRILL/Track_Environment_Free/Prefabs/Arch_for_banner_free_obs.prefab
+  artifactKey: Guid(27f69fe37e0c8c44f97be1aba8f406cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BEDRILL/Track_Environment_Free/Prefabs/Arch_for_banner_free_obs.prefab using Guid(27f69fe37e0c8c44f97be1aba8f406cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ef2f75f47eeeeed46792d3286926373') in 0.048227 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000071 seconds.
+  path: Assets/BEDRILL/Track_Environment_Free/Prefabs/Pole_light_free_obs.prefab
+  artifactKey: Guid(5a8f39913d8079645914b07628ae2049) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BEDRILL/Track_Environment_Free/Prefabs/Pole_light_free_obs.prefab using Guid(5a8f39913d8079645914b07628ae2049) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'feeff97b3b02836aac24a193f6a54527') in 0.034260 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000078 seconds.
+  path: Assets/BEDRILL/Track_Environment_Free/Prefabs/Arrow_01_free_obs.prefab
+  artifactKey: Guid(b2de576461b3e6349bb43cd827e123ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BEDRILL/Track_Environment_Free/Prefabs/Arrow_01_free_obs.prefab using Guid(b2de576461b3e6349bb43cd827e123ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e4ba849da4d400a31de23d4492df642') in 0.047252 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/BEDRILL/Track_Environment_Free/Prefabs/Arch_banner_finish_free_obs.prefab
+  artifactKey: Guid(c7bebf8ce7ad3264abbb7ed6a6953153) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BEDRILL/Track_Environment_Free/Prefabs/Arch_banner_finish_free_obs.prefab using Guid(c7bebf8ce7ad3264abbb7ed6a6953153) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c377dbf37c194dc702e5ff7f3eba4517') in 0.040920 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/BEDRILL/Track_Environment_Free/Prefabs/Barrier_free_obs.prefab
+  artifactKey: Guid(f26c4802677a5194091851e89ded1f3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BEDRILL/Track_Environment_Free/Prefabs/Barrier_free_obs.prefab using Guid(f26c4802677a5194091851e89ded1f3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33220c87a6d016a5540424f59e2a748b') in 0.047415 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000061 seconds.
+  path: Assets/BEDRILL/Track_Environment_Free/Prefabs/Flag_free_obs.prefab
+  artifactKey: Guid(2e1e65078fb46104b990555c32488a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BEDRILL/Track_Environment_Free/Prefabs/Flag_free_obs.prefab using Guid(2e1e65078fb46104b990555c32488a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1b946260ce24d779ffba30d949ca1e1') in 0.041517 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/BEDRILL/Track_Environment_Free/Prefabs/Cone_free_obs.prefab
+  artifactKey: Guid(b6e6982b772a1bc46b88d93db630bee4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BEDRILL/Track_Environment_Free/Prefabs/Cone_free_obs.prefab using Guid(b6e6982b772a1bc46b88d93db630bee4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6ecc019cec0eb75442a1a81e88996e6') in 0.045164 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000060 seconds.
+  path: Assets/BEDRILL/Track_Environment_Free/Prefabs/Arrow_02_free_obs.prefab
+  artifactKey: Guid(9c94a8e4ef130f449b9ac967b05bda92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BEDRILL/Track_Environment_Free/Prefabs/Arrow_02_free_obs.prefab using Guid(9c94a8e4ef130f449b9ac967b05bda92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f84a81a8f08629bb4cb80cffe04845d5') in 0.040522 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.536432 seconds.
+  path: Assets/BEDRILL/Track_Environment_Free/Prefabs/Tribune_free_obs.prefab
+  artifactKey: Guid(d83bf5421fa587548b541193382273ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BEDRILL/Track_Environment_Free/Prefabs/Tribune_free_obs.prefab using Guid(d83bf5421fa587548b541193382273ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1c340dadb5ada2897989dd7f13c9e71') in 0.037634 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 84.758472 seconds.
+  path: Assets/Car
+  artifactKey: Guid(e829124f2a394484fb298b89330e10e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car using Guid(e829124f2a394484fb298b89330e10e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '119d1a874fb48cdeae9fb1b1342f6b85') in 0.011988 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.952057 seconds.
+  path: Assets/New Folder
+  artifactKey: Guid(fc44fa3c9562c4545a449e5973132b65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New Folder using Guid(fc44fa3c9562c4545a449e5973132b65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd47e6edc6de3dec78b2a2201cc72035c') in 0.017085 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 81.963574 seconds.
+  path: Assets/Car/Favoured Cars Pack - Low Poly (FREE)/Models/Car_1_Free.fbx
+  artifactKey: Guid(7a4555faea2b43148bf4b7564009f967) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Favoured Cars Pack - Low Poly (FREE)/Models/Car_1_Free.fbx using Guid(7a4555faea2b43148bf4b7564009f967) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f3f3ba87638d0136e961b784d89d830') in 1.373591 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000062 seconds.
+  path: Assets/Car/Favoured Cars Pack - Low Poly (FREE)/Models/Disc_Rim_Tire_1_Free.fbx
+  artifactKey: Guid(6781919fcacbed44aa5a899a9281b8ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Favoured Cars Pack - Low Poly (FREE)/Models/Disc_Rim_Tire_1_Free.fbx using Guid(6781919fcacbed44aa5a899a9281b8ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2839afc6e3e583b0ca892ca22ca3e2a') in 1.356401 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000084 seconds.
+  path: Assets/Car/Favoured Cars Pack - Low Poly (FREE)/Models/Disc_Rim_Tire_2_Free.fbx
+  artifactKey: Guid(722c360b3b6dcb24191c2050833078b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Favoured Cars Pack - Low Poly (FREE)/Models/Disc_Rim_Tire_2_Free.fbx using Guid(722c360b3b6dcb24191c2050833078b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd430a3fa388863599448ecbe09e7b9e2') in 0.256049 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000060 seconds.
+  path: Assets/Car/Favoured Cars Pack - Low Poly (FREE)/Models/Car_2_Free.fbx
+  artifactKey: Guid(178d4df5ba94a0443998af30e343751a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Favoured Cars Pack - Low Poly (FREE)/Models/Car_2_Free.fbx using Guid(178d4df5ba94a0443998af30e343751a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed08fad74d097c5dc75eb07a1869154e') in 0.146493 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/Car/Favoured Cars Pack - Low Poly (FREE)/Models/Disc_Rim_Tire_3_Free.fbx
+  artifactKey: Guid(cb3f795bf23196642941bd17d93eab72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Favoured Cars Pack - Low Poly (FREE)/Models/Disc_Rim_Tire_3_Free.fbx using Guid(cb3f795bf23196642941bd17d93eab72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '325625b3acc24c5815c573b840f5a80b') in 0.148638 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Car/Favoured Cars Pack - Low Poly (FREE)/Models/Car_3_Free.fbx
+  artifactKey: Guid(f9dae77a0b1ebb548881231dcb6285c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Favoured Cars Pack - Low Poly (FREE)/Models/Car_3_Free.fbx using Guid(f9dae77a0b1ebb548881231dcb6285c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '592327c72af9b97c79c62cb500571438') in 0.071928 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/Car/Favoured Cars Pack - Low Poly (FREE)/Models/Car_4_Free.fbx
+  artifactKey: Guid(47b00206add3ba649b97efb4050780b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Favoured Cars Pack - Low Poly (FREE)/Models/Car_4_Free.fbx using Guid(47b00206add3ba649b97efb4050780b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '921d871f7a594f2c9eec8f3a60eeb381') in 0.084626 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.140195 seconds.
+  path: Assets/Car/Favoured Cars Pack - Low Poly (FREE)/Prefab/Car_1_Free.prefab
+  artifactKey: Guid(76973b715eb8432499748821fbc86a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Favoured Cars Pack - Low Poly (FREE)/Prefab/Car_1_Free.prefab using Guid(76973b715eb8432499748821fbc86a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e935e7014e8b8d8449af85f8e8a54199') in 1.581712 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000128 seconds.
+  path: Assets/Car/Favoured Cars Pack - Low Poly (FREE)/Prefab/Car_4_Free.prefab
+  artifactKey: Guid(25b7b73499ac36c4d99262690f2d1f9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Favoured Cars Pack - Low Poly (FREE)/Prefab/Car_4_Free.prefab using Guid(25b7b73499ac36c4d99262690f2d1f9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30046861f7f5d32ceeca3ea4f6dcb7c8') in 0.594252 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000068 seconds.
+  path: Assets/Car/Favoured Cars Pack - Low Poly (FREE)/Prefab/Car_2_Free.prefab
+  artifactKey: Guid(4080e309b46c81b46a9129ff6ba9e280) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Favoured Cars Pack - Low Poly (FREE)/Prefab/Car_2_Free.prefab using Guid(4080e309b46c81b46a9129ff6ba9e280) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c8f71952742bab2aba639328a52b347') in 0.834852 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000055 seconds.
+  path: Assets/Car/Favoured Cars Pack - Low Poly (FREE)/Prefab/Car_3_Free.prefab
+  artifactKey: Guid(41d9dd3b8b783f14d902e7b6c4f73ec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Favoured Cars Pack - Low Poly (FREE)/Prefab/Car_3_Free.prefab using Guid(41d9dd3b8b783f14d902e7b6c4f73ec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '610107da0775f00581cc6ab7c35497f8') in 0.531415 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 42.039072 seconds.
+  path: Assets/LowPolyVehicle2/Prefabs
+  artifactKey: Guid(f3def4213b0a17c47a69e11c62c65c47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LowPolyVehicle2/Prefabs using Guid(f3def4213b0a17c47a69e11c62c65c47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41a4666a209de4e3f1d13d2a33b14acf') in 0.029080 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.029946 seconds.
+  path: Assets/LowPolyVehicle2/Prefabs/ground.prefab
+  artifactKey: Guid(e45001658fd46ac48ac6e5bea66cadba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LowPolyVehicle2/Prefabs/ground.prefab using Guid(e45001658fd46ac48ac6e5bea66cadba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5971cd14d8a442084571af786ca36ab8') in 0.032562 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/LowPolyVehicle2/Prefabs/vehicle2-blue.prefab
+  artifactKey: Guid(b9520086e6044ec428e7142211bb0ef7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LowPolyVehicle2/Prefabs/vehicle2-blue.prefab using Guid(b9520086e6044ec428e7142211bb0ef7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00d74dcedd9a298fb8c21ab19af1e8e6') in 0.474652 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 86.498278 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs
+  artifactKey: Guid(4536b03f8679d7641b7e6b1ead66e1f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs using Guid(4536b03f8679d7641b7e6b1ead66e1f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8986097a4712b216b8ae6e64c09f9de0') in 0.014306 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.107940 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz01
+  artifactKey: Guid(7752f4db15a1c6045bc744cf8728ccbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz01 using Guid(7752f4db15a1c6045bc744cf8728ccbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3859da4a934c29759508d31a1198e28f') in 0.014824 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.197718 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz01/vz01_ blue.prefab
+  artifactKey: Guid(f4197335c4487e143a4c408b5e123f49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz01/vz01_ blue.prefab using Guid(f4197335c4487e143a4c408b5e123f49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1714b844605a4c64e74f94acc4bad98') in 0.363311 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz01/vz01_ sand.prefab
+  artifactKey: Guid(dad6e7ed5e80039408e1a407f56cf1ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz01/vz01_ sand.prefab using Guid(dad6e7ed5e80039408e1a407f56cf1ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52a5e67a44989880d2f31bf85b127343') in 0.047594 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000060 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz01/vz01_black.prefab
+  artifactKey: Guid(0dd9d711c05f33949b639c91ebb8b169) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz01/vz01_black.prefab using Guid(0dd9d711c05f33949b639c91ebb8b169) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '501a48897f16f3adf2f082c39232d420') in 0.025372 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz01/vz01_ gray.prefab
+  artifactKey: Guid(38bffec2b52c8d549b57b30403127884) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz01/vz01_ gray.prefab using Guid(38bffec2b52c8d549b57b30403127884) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ffefafd00bed6faf6aa67af6ec11ef26') in 0.031360 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz01/vz01_ purple.prefab
+  artifactKey: Guid(dba28c1c947b1b7428e1edb23430b88f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz01/vz01_ purple.prefab using Guid(dba28c1c947b1b7428e1edb23430b88f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '418d22ac0afedb247f996f66eb7fed99') in 0.039161 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz01/vz01_ lightblue.prefab
+  artifactKey: Guid(d31c2978b3c532641849461176196ffc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz01/vz01_ lightblue.prefab using Guid(d31c2978b3c532641849461176196ffc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b3d7b82dec581472014174fcc3b0e7f') in 0.033896 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz01/vz01_ red.prefab
+  artifactKey: Guid(4f6e29e296dfee84b991c56a804e7262) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz01/vz01_ red.prefab using Guid(4f6e29e296dfee84b991c56a804e7262) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3fa41f31ac5d56d05fef17e8446ead1') in 0.025682 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz01/vz01_ yellow.prefab
+  artifactKey: Guid(ba9e716894432d84abb1abcf8e3d2779) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz01/vz01_ yellow.prefab using Guid(ba9e716894432d84abb1abcf8e3d2779) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2139bf469bd334bec484e7f8c28993c8') in 0.039379 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz01/vz01_ green.prefab
+  artifactKey: Guid(a6068151ae56bfe41b9a47a49cb3bcac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz01/vz01_ green.prefab using Guid(a6068151ae56bfe41b9a47a49cb3bcac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '176d15e298b24e7af6bb1a6b385db1c8') in 0.033851 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000066 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz01/vz01_ white.prefab
+  artifactKey: Guid(173aca1d877251c4390a2c279f6335ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz01/vz01_ white.prefab using Guid(173aca1d877251c4390a2c279f6335ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4237b835a8cd928c9ad97c9912874ad1') in 0.036855 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.905343 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/gz21/gz21_ blue.prefab
+  artifactKey: Guid(83b22c1c7009d674989b4b363cfb4bce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/gz21/gz21_ blue.prefab using Guid(83b22c1c7009d674989b4b363cfb4bce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0b3c0f40bb7d715571f4e67c4a3f502') in 0.032203 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/gz21/gz21_ white.prefab
+  artifactKey: Guid(6e6d2eddd93e518429db6bc3d8b567ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/gz21/gz21_ white.prefab using Guid(6e6d2eddd93e518429db6bc3d8b567ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fca2428d8f220746c5ee994548c55c1f') in 0.037522 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/gz21/gz21_ yellow.prefab
+  artifactKey: Guid(90e108cbfc66c414fb4f2c46d36eaa89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/gz21/gz21_ yellow.prefab using Guid(90e108cbfc66c414fb4f2c46d36eaa89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db3c43d49b9b5395bfac98b25172bba1') in 0.053947 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/gz21/gz21_ sand.prefab
+  artifactKey: Guid(7bf8638760975074a99bcce60947f410) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/gz21/gz21_ sand.prefab using Guid(7bf8638760975074a99bcce60947f410) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e530b40fdd379fcad50ab3e336caa921') in 0.025523 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/gz21/gz21_black.prefab
+  artifactKey: Guid(e688bed69d182694cb389c0059670a0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/gz21/gz21_black.prefab using Guid(e688bed69d182694cb389c0059670a0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f74e00ce65b9a1f3cbcb2490d89e7c45') in 0.025317 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/gz21/gz21_ lightblue.prefab
+  artifactKey: Guid(3c2ae027d5a4b3543b8bc87c334282da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/gz21/gz21_ lightblue.prefab using Guid(3c2ae027d5a4b3543b8bc87c334282da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbb3382a0c75d9d3281b947fdd5f53ff') in 0.033016 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000065 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/gz21/gz21_ green.prefab
+  artifactKey: Guid(6786d61d19e0d1a46a6e2c710fd480b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/gz21/gz21_ green.prefab using Guid(6786d61d19e0d1a46a6e2c710fd480b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de4b4878c05cfd18ab4118786fdd624d') in 0.039970 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/gz21/gz21_ purple.prefab
+  artifactKey: Guid(d8806fcf268feac4184deae0a6f97a9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/gz21/gz21_ purple.prefab using Guid(d8806fcf268feac4184deae0a6f97a9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '244764516ece0d5a814b66ebe77c1d73') in 0.031973 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/gz21/gz21_ red.prefab
+  artifactKey: Guid(649b11d5b9749054f8c98071eb8b7092) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/gz21/gz21_ red.prefab using Guid(649b11d5b9749054f8c98071eb8b7092) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3403f2c65ef45474641166c920ba57e') in 0.038802 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/gz21/gz21_gray.prefab
+  artifactKey: Guid(93c950377efb14d4d8bff445e6badc9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/gz21/gz21_gray.prefab using Guid(93c950377efb14d4d8bff445e6badc9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34238d00373424b8505be028422d014a') in 0.036135 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.899239 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/gz24/gz24_black.prefab
+  artifactKey: Guid(46061d83d9ec9e74f948ce797eb4cd10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/gz24/gz24_black.prefab using Guid(46061d83d9ec9e74f948ce797eb4cd10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80d3910cecfbef165b710d620528f804') in 0.029143 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/gz24/gz24_blue.prefab
+  artifactKey: Guid(af4908a7f31088a4b96ec75ef4f1b61f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/gz24/gz24_blue.prefab using Guid(af4908a7f31088a4b96ec75ef4f1b61f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9172592f2bebc81d54088587702b1896') in 0.029415 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/gz24/gz24_sand.prefab
+  artifactKey: Guid(a5ce489c5dc10e94092f5a88887d3f27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/gz24/gz24_sand.prefab using Guid(a5ce489c5dc10e94092f5a88887d3f27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '155adc378e13104b62d8678a07b0d53d') in 0.031441 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000098 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/gz24/gz24_green.prefab
+  artifactKey: Guid(63031d01e5ad3164a860757caa90da85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/gz24/gz24_green.prefab using Guid(63031d01e5ad3164a860757caa90da85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19032e6863d23ea280b2351476db25b6') in 0.043895 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000066 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/gz24/gz24_puple.prefab
+  artifactKey: Guid(f75711e1584601b4da7bc374b2b12165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/gz24/gz24_puple.prefab using Guid(f75711e1584601b4da7bc374b2b12165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7240dd59415a0d58633c7435ea5c3985') in 0.035002 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000065 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/gz24/gz24_red.prefab
+  artifactKey: Guid(9c03df25d4c2bd64cab3fbfb4de0e554) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/gz24/gz24_red.prefab using Guid(9c03df25d4c2bd64cab3fbfb4de0e554) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9108b2bd80d946a55f284e61968d1b8c') in 0.040750 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/gz24/gz24_gray.prefab
+  artifactKey: Guid(e9732252c7657bd4fb10d3ae58c8f1c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/gz24/gz24_gray.prefab using Guid(e9732252c7657bd4fb10d3ae58c8f1c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5268fbcc89e91a866fa72d8896eaa05') in 0.045554 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/gz24/gz24_lightblue.prefab
+  artifactKey: Guid(5fe2d0c555ffed74cb794c4de5eea923) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/gz24/gz24_lightblue.prefab using Guid(5fe2d0c555ffed74cb794c4de5eea923) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '480d5121c94611d2bd55ef4b82c95689') in 0.032589 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/gz24/gz24_white.prefab
+  artifactKey: Guid(d7aa065ec10487448bfd761f321493cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/gz24/gz24_white.prefab using Guid(d7aa065ec10487448bfd761f321493cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78378c97b3a3639ad6d869006ba21c3c') in 0.051174 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/gz24/gz24_yellow.prefab
+  artifactKey: Guid(e4f692da1b272f04eac6261a030dfec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/gz24/gz24_yellow.prefab using Guid(e4f692da1b272f04eac6261a030dfec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d154c741d39ba0028df9fa231f865cd') in 0.040104 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.430616 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz02/vz02_ blue.prefab
+  artifactKey: Guid(5a850b7604c4c1149b54d961143573ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz02/vz02_ blue.prefab using Guid(5a850b7604c4c1149b54d961143573ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21fdda7b3dde25eef2d67212ac8d7a31') in 0.030503 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz02/vz02_ sand.prefab
+  artifactKey: Guid(dd8403e9e1ca2234789f07b749c81100) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz02/vz02_ sand.prefab using Guid(dd8403e9e1ca2234789f07b749c81100) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6cdf1adbdfd4f3879da56f8aa245046d') in 0.031078 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz02/vz02_ yellow.prefab
+  artifactKey: Guid(04d9f24d35854ba4ea5de5c673d4456e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz02/vz02_ yellow.prefab using Guid(04d9f24d35854ba4ea5de5c673d4456e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fe6d9bacb98d0bef1f973fe8af1573d') in 0.045145 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz02/vz02_ purple.prefab
+  artifactKey: Guid(b957da1886efb7d40b44318e579c839d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz02/vz02_ purple.prefab using Guid(b957da1886efb7d40b44318e579c839d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bae6892fd293dd9dadee4dab4fb49f98') in 0.047531 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz02/vz02_ lightblue.prefab
+  artifactKey: Guid(1c6962262b4f0a149ab65c01e46bf547) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz02/vz02_ lightblue.prefab using Guid(1c6962262b4f0a149ab65c01e46bf547) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33cb696bebe57b237e3c6780bbc5feea') in 0.059079 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000118 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz02/vz02_ red.prefab
+  artifactKey: Guid(e319ed6541cb355408a0a1f8023492f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz02/vz02_ red.prefab using Guid(e319ed6541cb355408a0a1f8023492f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c4f62e049bc10909bcb9249c068b53e') in 0.048172 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000076 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz02/vz02_black.prefab
+  artifactKey: Guid(da9f0a502fc11c54fb721aa61bcf0d8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz02/vz02_black.prefab using Guid(da9f0a502fc11c54fb721aa61bcf0d8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8f31bb402312739c6cf10abe6f6f361') in 0.056457 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz02/vz02_ gray.prefab
+  artifactKey: Guid(9e1404cb0be70c64dab3e0ffbe1f0581) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz02/vz02_ gray.prefab using Guid(9e1404cb0be70c64dab3e0ffbe1f0581) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75f043786ad7e525a02da71b964ee4b9') in 0.121812 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz02/vz02_ white.prefab
+  artifactKey: Guid(f6f784391a470874195d4fd456dfc795) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz02/vz02_ white.prefab using Guid(f6f784391a470874195d4fd456dfc795) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03082ebf070041efd200f6cb1dfe061d') in 0.050853 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz02/vz02_ green.prefab
+  artifactKey: Guid(b2f783f0bf9936a43ab99739f5c6aabb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz02/vz02_ green.prefab using Guid(b2f783f0bf9936a43ab99739f5c6aabb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '864506c21843e0f4a296a9c9b900c65e') in 0.039413 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.062025 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz03/vz03_ blue.prefab
+  artifactKey: Guid(e12e67d2d039d5b439cd8ccffc68b6cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz03/vz03_ blue.prefab using Guid(e12e67d2d039d5b439cd8ccffc68b6cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '308b47ba0affb81000fa11e067bb60a1') in 0.043004 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz03/vz03_ gray.prefab
+  artifactKey: Guid(70aaca4226b14fe42aa4a3b0449cf457) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz03/vz03_ gray.prefab using Guid(70aaca4226b14fe42aa4a3b0449cf457) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '259d9e78d44544d21748306154aea9e9') in 0.028853 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz03/vz03_ purple.prefab
+  artifactKey: Guid(f1051a7c89697d242a61c29fe12ab2cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz03/vz03_ purple.prefab using Guid(f1051a7c89697d242a61c29fe12ab2cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abd8a3124c8cb243c86441f8d4defffa') in 0.052720 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz03/vz03_ lightblue.prefab
+  artifactKey: Guid(caa2c2c3ab3256b46a7d225942dc1a9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz03/vz03_ lightblue.prefab using Guid(caa2c2c3ab3256b46a7d225942dc1a9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6268cceb506363a1d4a3cc314a659415') in 0.047266 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz03/vz03_ white.prefab
+  artifactKey: Guid(f54396fab917bc949b664f13196045d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz03/vz03_ white.prefab using Guid(f54396fab917bc949b664f13196045d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a09804cf7d6409ef5cd555c89bdf414') in 0.043897 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz03/vz03_ red.prefab
+  artifactKey: Guid(a2ece446df2453e44852f1235fe8d1c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz03/vz03_ red.prefab using Guid(a2ece446df2453e44852f1235fe8d1c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9d3b4480871a2e032829005628cf16f') in 0.044307 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz03/vz03_ green.prefab
+  artifactKey: Guid(8ed89115fdc6c4844b5974fb3c432c24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz03/vz03_ green.prefab using Guid(8ed89115fdc6c4844b5974fb3c432c24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2aff9a006a9be9f2f23c8b68faf48d94') in 0.054540 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz03/vz03_ yellow.prefab
+  artifactKey: Guid(cec24f51b00e5c9429c80ba8cf7dceb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz03/vz03_ yellow.prefab using Guid(cec24f51b00e5c9429c80ba8cf7dceb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef85932bcd91ec6dbb7a4f0305020046') in 0.024441 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz03/vz03_black.prefab
+  artifactKey: Guid(36aac274ae306b247b4aa63ab57bfd05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz03/vz03_black.prefab using Guid(36aac274ae306b247b4aa63ab57bfd05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17c73fbac774a24d97365f145c09016b') in 0.027542 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz03/vz03_ sand.prefab
+  artifactKey: Guid(f3b21e4db37b2e74c9c4bda50d5c6115) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz03/vz03_ sand.prefab using Guid(f3b21e4db37b2e74c9c4bda50d5c6115) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1b2dc62cbd46cd4f7cfcac440b43a92') in 0.038498 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.185315 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz05/vz05_ blue.prefab
+  artifactKey: Guid(61278fe6bd1d1b04da8da31ea030afa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz05/vz05_ blue.prefab using Guid(61278fe6bd1d1b04da8da31ea030afa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7afa1643c0de133bf6c2e8e2ba0ad22e') in 0.031460 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz05/vz05_ lightblue.prefab
+  artifactKey: Guid(bc3f15d7b6cd3cc40934d022c40a2c66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz05/vz05_ lightblue.prefab using Guid(bc3f15d7b6cd3cc40934d022c40a2c66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ecf77cd5d3d6751b2c400bc17ad8525e') in 0.027547 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz05/vz05_ sand.prefab
+  artifactKey: Guid(d905337fd8451a84a83e0a83c56f7b3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz05/vz05_ sand.prefab using Guid(d905337fd8451a84a83e0a83c56f7b3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b703e37bf90b619960345ae83520b5e') in 0.027037 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz05/vz05_ green.prefab
+  artifactKey: Guid(99ec8b67ff7c2e94792441f3a28a24f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz05/vz05_ green.prefab using Guid(99ec8b67ff7c2e94792441f3a28a24f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10d06ae16726fd227f3bcb218c8bc272') in 0.039051 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz05/vz05_ white.prefab
+  artifactKey: Guid(dea8dd1cda91a7c45bf518a9b4250511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz05/vz05_ white.prefab using Guid(dea8dd1cda91a7c45bf518a9b4250511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '569f6babd4ace3910f5f1c1b5c85dc09') in 0.040788 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz05/vz05_ red.prefab
+  artifactKey: Guid(d7c073adee5895e42938827ed0db7b5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz05/vz05_ red.prefab using Guid(d7c073adee5895e42938827ed0db7b5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd81ed4ec55b4deafc0ed8e78c75573c1') in 0.039050 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz05/vz05_black.prefab
+  artifactKey: Guid(855093fc623e0954b91563e849bdd750) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz05/vz05_black.prefab using Guid(855093fc623e0954b91563e849bdd750) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66b95460169e881b3d1939b471af89cb') in 0.042932 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz05/vz05_ yellow.prefab
+  artifactKey: Guid(ba047d801292ec246bbc55a6d63c7a9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz05/vz05_ yellow.prefab using Guid(ba047d801292ec246bbc55a6d63c7a9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '574434b2a2dd4daa0498c89bded5cd4e') in 0.037656 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz05/vz05_ purple.prefab
+  artifactKey: Guid(8c077f6336c09a442b89003cf1618341) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz05/vz05_ purple.prefab using Guid(8c077f6336c09a442b89003cf1618341) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fef32a45d0d35df98c6ddb588175854') in 0.037647 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz05/vz05_ gray.prefab
+  artifactKey: Guid(219a7eb33de7c5341861773bf5d1c9b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz05/vz05_ gray.prefab using Guid(219a7eb33de7c5341861773bf5d1c9b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e889bfafaa8e846df0702548fc7bc5a9') in 0.044505 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.371686 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz05r/vz05r_ blue.prefab
+  artifactKey: Guid(6315811d8259b0b45b89f00a85817e5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz05r/vz05r_ blue.prefab using Guid(6315811d8259b0b45b89f00a85817e5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e59e350556e7fdcfb5779f8f3bcb9542') in 0.030290 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz05r/vz05r_ purple.prefab
+  artifactKey: Guid(07260ff00224c614ab8cde9d083a8777) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz05r/vz05r_ purple.prefab using Guid(07260ff00224c614ab8cde9d083a8777) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e019ef7a44c03177e7f68a6e3d93ebc') in 0.036861 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz05r/vz05r_ sand.prefab
+  artifactKey: Guid(8d45d8707c6a893438beab67aa47a632) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz05r/vz05r_ sand.prefab using Guid(8d45d8707c6a893438beab67aa47a632) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a0eabc9e481911fe82eca090b8eec56') in 0.036554 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000055 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz05r/vz05r_ lightblue.prefab
+  artifactKey: Guid(4e064c3d0fcd8a54a80d57ad478af168) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz05r/vz05r_ lightblue.prefab using Guid(4e064c3d0fcd8a54a80d57ad478af168) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7de331c04d4f4a04a557093917ab0840') in 0.038496 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz05r/vz05r_ yellow.prefab
+  artifactKey: Guid(29dcd43df15890b48948c58b6e2b4eae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz05r/vz05r_ yellow.prefab using Guid(29dcd43df15890b48948c58b6e2b4eae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3844d83275be52432d8685fb7c96d8e7') in 0.044671 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000107 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz05r/vz05r_ red.prefab
+  artifactKey: Guid(08baa6c64e00213479f21969c7a84623) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz05r/vz05r_ red.prefab using Guid(08baa6c64e00213479f21969c7a84623) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb43d587eedcfdd558006e588726bd74') in 0.044564 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz05r/vz05r_black.prefab
+  artifactKey: Guid(f32ede4ab2edf8f4e830abd1b97f75bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz05r/vz05r_black.prefab using Guid(f32ede4ab2edf8f4e830abd1b97f75bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a540017c5220add39b8fa626ff63b8de') in 0.045749 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000137 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz05r/vz05r_ white.prefab
+  artifactKey: Guid(51d31e6e50a474d47ad97a8e78f3cfeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz05r/vz05r_ white.prefab using Guid(51d31e6e50a474d47ad97a8e78f3cfeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '626b4fe391bd40619753cc009184282a') in 0.044656 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz05r/vz05r_ green.prefab
+  artifactKey: Guid(ac3c55731d88d664d919cdcf6e41410b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz05r/vz05r_ green.prefab using Guid(ac3c55731d88d664d919cdcf6e41410b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e056307c2e7654c46246d4f4ad48e539') in 0.039075 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz05r/vz05r_ gray.prefab
+  artifactKey: Guid(ce434211a42c33c42a0f183dd5245935) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz05r/vz05r_ gray.prefab using Guid(ce434211a42c33c42a0f183dd5245935) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5495d5421fe10274b840da4653138895') in 0.036753 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.678546 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz099/vz099_ blue.prefab
+  artifactKey: Guid(d7245f9cd3c71384791a5e90e5ff845a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz099/vz099_ blue.prefab using Guid(d7245f9cd3c71384791a5e90e5ff845a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7304d4a2fcde1b8357d3d9f443f098a0') in 0.030576 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz099/vz099_ purple.prefab
+  artifactKey: Guid(23efd2fcf1ebd7f409734178b5e944dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz099/vz099_ purple.prefab using Guid(23efd2fcf1ebd7f409734178b5e944dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d700c5a6606aa04819de3dcdb77e12c') in 0.034679 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz099/vz099_ green.prefab
+  artifactKey: Guid(90c282636628648458a6ed5c45b46252) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz099/vz099_ green.prefab using Guid(90c282636628648458a6ed5c45b46252) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c53886d409dcf0ead375edb9fdce405') in 0.025171 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000055 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz099/vz099_black.prefab
+  artifactKey: Guid(860765426cfe9f343909f39bf037b24c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz099/vz099_black.prefab using Guid(860765426cfe9f343909f39bf037b24c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ddb1215b4931e85b1eb3f201650c065d') in 0.030169 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz099/vz099_ white.prefab
+  artifactKey: Guid(03900886be7999e4baba0a93a9d0192e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz099/vz099_ white.prefab using Guid(03900886be7999e4baba0a93a9d0192e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9377840dc56d90e10c59515f48762319') in 0.040289 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000083 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz099/vz099_ lightblue.prefab
+  artifactKey: Guid(2bb04eaf605d45e4f8a33f55bbd31cb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz099/vz099_ lightblue.prefab using Guid(2bb04eaf605d45e4f8a33f55bbd31cb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebc55217c6a6609c4e7bbc3d8767e419') in 0.041564 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz099/vz099_ sand.prefab
+  artifactKey: Guid(5d0b114b8959da9428675ac6b602ad43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz099/vz099_ sand.prefab using Guid(5d0b114b8959da9428675ac6b602ad43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20e1b9bda9ef2c99c16437a116089a09') in 0.034959 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz099/vz099_ gray.prefab
+  artifactKey: Guid(c9b38f67c8b91cf4c888555e68a7a409) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz099/vz099_ gray.prefab using Guid(c9b38f67c8b91cf4c888555e68a7a409) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13bb06b24ce7ceb0cf2a21cf224e4048') in 0.030805 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz099/vz099_ red.prefab
+  artifactKey: Guid(671e3db5fff14a444810359184f3df73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz099/vz099_ red.prefab using Guid(671e3db5fff14a444810359184f3df73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ae2c9b4afbdd4f6b8da079d5ef9694a') in 0.028811 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000059 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz099/vz099_ yellow.prefab
+  artifactKey: Guid(25273c36e74c5174e9eb8b1cf5c700a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz099/vz099_ yellow.prefab using Guid(25273c36e74c5174e9eb8b1cf5c700a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1247f7d1a6efa3d5da60fa5191c8e29c') in 0.053063 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.594661 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz31/vz31_ blue.prefab
+  artifactKey: Guid(9b4761b9dd041174e9fc952df05c6055) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz31/vz31_ blue.prefab using Guid(9b4761b9dd041174e9fc952df05c6055) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b857ea3b7d8d1e28e4bddf7e1002f97e') in 0.027117 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz31/vz31_sand.prefab
+  artifactKey: Guid(6a88dfa02d42c4746b9d7f964ef96762) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz31/vz31_sand.prefab using Guid(6a88dfa02d42c4746b9d7f964ef96762) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe31a4a5780afee8b97eddf3e5c82dde') in 0.025188 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz31/vz31_ purple.prefab
+  artifactKey: Guid(b34f3424030db4d46825f6db34200f85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz31/vz31_ purple.prefab using Guid(b34f3424030db4d46825f6db34200f85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3d90c8a9e365c3fade53a175378e6fe') in 0.025014 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz31/vz31_ lightblue.prefab
+  artifactKey: Guid(f352e020af7e236408a5eae33101ca3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz31/vz31_ lightblue.prefab using Guid(f352e020af7e236408a5eae33101ca3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6e4fd8f6ba95fc3a8f044fb0a2d44a6') in 0.042671 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz31/vz31_ yellow.prefab
+  artifactKey: Guid(46e9e1dc555fcce448b66805190992b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz31/vz31_ yellow.prefab using Guid(46e9e1dc555fcce448b66805190992b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '390caade9fea9d85c3a88f12913aca6f') in 0.038519 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz31/vz31_ green.prefab
+  artifactKey: Guid(65eccadfe1a81f240828edb25ddf3078) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz31/vz31_ green.prefab using Guid(65eccadfe1a81f240828edb25ddf3078) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '619fbf999789d08502f3498b41f3fb68') in 0.026346 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000065 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz31/vz31_ white.prefab
+  artifactKey: Guid(5563ed6a8c437e448b0122ee29715fe5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz31/vz31_ white.prefab using Guid(5563ed6a8c437e448b0122ee29715fe5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '419bde064c42c84e1b9b54db6d5aafdf') in 0.046871 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz31/vz31_ gray.prefab
+  artifactKey: Guid(ae16a44bde4942e45bf4881ef0425b28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz31/vz31_ gray.prefab using Guid(ae16a44bde4942e45bf4881ef0425b28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ec94524493f95ba643f28f84c5a94b2') in 0.036680 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz31/vz31_ red.prefab
+  artifactKey: Guid(546e140e8fc693c499546542ea5f7e66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz31/vz31_ red.prefab using Guid(546e140e8fc693c499546542ea5f7e66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b02c1ae16d267369b4680d2564af896e') in 0.046075 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz31/vz31_black.prefab
+  artifactKey: Guid(32de8f4b731009944a4fd82a81e6a865) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz31/vz31_black.prefab using Guid(32de8f4b731009944a4fd82a81e6a865) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '031eec100ac1702a65a7f5fb5047d333') in 0.025711 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.515455 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz21/vz21_ blue.prefab
+  artifactKey: Guid(73389107034a65c4d9aa2b2d76e0d51e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz21/vz21_ blue.prefab using Guid(73389107034a65c4d9aa2b2d76e0d51e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53ace4c90c72ff0a006d3d8c99a1192e') in 0.027004 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz21/vz21_ purple.prefab
+  artifactKey: Guid(41efa976669d90e45ba4cea269ef121a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz21/vz21_ purple.prefab using Guid(41efa976669d90e45ba4cea269ef121a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8546935cf483c6ff626255486c7ac726') in 0.027930 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz21/vz21_ yellow.prefab
+  artifactKey: Guid(7cc9ae45c9a282f4eac91b43bb20cc50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz21/vz21_ yellow.prefab using Guid(7cc9ae45c9a282f4eac91b43bb20cc50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef0c5c587ebe5fd059d36ef3e4b5d3c6') in 0.029023 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz21/vz21_ red.prefab
+  artifactKey: Guid(a090f32670d818746913bfb5af39674f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz21/vz21_ red.prefab using Guid(a090f32670d818746913bfb5af39674f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9f5380ea8d7ea5978e6e4df08de077b') in 0.039990 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz21/vz21_ white.prefab
+  artifactKey: Guid(c24c2b6739f99204c9adc9896cbf7590) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz21/vz21_ white.prefab using Guid(c24c2b6739f99204c9adc9896cbf7590) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33a981606c5656416aa38161e6568c40') in 0.024037 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000059 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz21/vz21_ gray.prefab
+  artifactKey: Guid(2684ec9ede2e8b4478c7f65953916119) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz21/vz21_ gray.prefab using Guid(2684ec9ede2e8b4478c7f65953916119) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '336bebb09cd27ac18ae065365a4b17cc') in 0.039441 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz21/vz21_ lightblue.prefab
+  artifactKey: Guid(4c0a46fab027ac04ca325cdc95c7f806) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz21/vz21_ lightblue.prefab using Guid(4c0a46fab027ac04ca325cdc95c7f806) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57fc6d37532444bb6a50addf80a24310') in 0.048305 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz21/vz21_ green.prefab
+  artifactKey: Guid(548360d15f94d1748b14636551333a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz21/vz21_ green.prefab using Guid(548360d15f94d1748b14636551333a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0906c09de54aa645ee5971a9190499c') in 0.026227 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz21/vz21_black.prefab
+  artifactKey: Guid(b715dfc184e0abc428a98b2aa0613e19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz21/vz21_black.prefab using Guid(b715dfc184e0abc428a98b2aa0613e19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d8f79aa85b532001eb85f0ae6d26a47') in 0.025052 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz21/vz21_ sand.prefab
+  artifactKey: Guid(2d9c8cea36c9b3542806ca5d8d8dc4de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz21/vz21_ sand.prefab using Guid(2d9c8cea36c9b3542806ca5d8d8dc4de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '506e6b491cd1783b5f855a0b59e47a4d') in 0.045453 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.718589 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz09/vz09_ blue.prefab
+  artifactKey: Guid(c844bb83f65e7204ba1b7261966da076) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz09/vz09_ blue.prefab using Guid(c844bb83f65e7204ba1b7261966da076) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a0d5b51dda64aa26ede9f7236deff63') in 0.034878 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz09/vz09_ purple.prefab
+  artifactKey: Guid(6bc4d4d579a617b4086fdd59e803a46c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz09/vz09_ purple.prefab using Guid(6bc4d4d579a617b4086fdd59e803a46c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53b95b629292e9e1ca73c1e2e32d3bea') in 0.027781 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz09/vz09_ green.prefab
+  artifactKey: Guid(1654b17d23f689340a47ce6c90304cb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz09/vz09_ green.prefab using Guid(1654b17d23f689340a47ce6c90304cb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9fd801f0e4052f99d46d0ff2e8fdf0f') in 0.026446 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz09/vz09_ sand.prefab
+  artifactKey: Guid(13d039f687dc5d744a0d7fd97b0b92f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz09/vz09_ sand.prefab using Guid(13d039f687dc5d744a0d7fd97b0b92f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3dd83aea16bab6c3915795f5a19ab2c7') in 0.042950 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz09/vz09_ yellow.prefab
+  artifactKey: Guid(ee34066a92a2bd649b5f63f3c26dc515) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz09/vz09_ yellow.prefab using Guid(ee34066a92a2bd649b5f63f3c26dc515) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b2dca07de3b41569033a53d511be36b') in 0.043745 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz09/vz09_black.prefab
+  artifactKey: Guid(495973eb002969c48be8fffe94cc56ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz09/vz09_black.prefab using Guid(495973eb002969c48be8fffe94cc56ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f4d541d73e0db4d4ba37004da7db23e') in 0.129592 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz09/vz09_ red.prefab
+  artifactKey: Guid(071c38bb80ba38a49986dfcc0eed9d17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz09/vz09_ red.prefab using Guid(071c38bb80ba38a49986dfcc0eed9d17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58b9a25583d375623dbcef81f6a32a8d') in 0.046030 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz09/vz09_ lightblue.prefab
+  artifactKey: Guid(bed7f529b521b1c4890fef540ee667a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz09/vz09_ lightblue.prefab using Guid(bed7f529b521b1c4890fef540ee667a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c9e12c7f509470b397ebbc725e54605') in 0.041669 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz09/vz09_ white.prefab
+  artifactKey: Guid(b931b1b4649d1b342986f5d000a8449c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz09/vz09_ white.prefab using Guid(b931b1b4649d1b342986f5d000a8449c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f96c01e21e4316f4247885e87f18ce7') in 0.040794 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz09/vz09_ gray.prefab
+  artifactKey: Guid(e3eede387629a0441b9709e2b5c3fc0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Car/Low Poly Soviet Car Pack/Prefabs/vz09/vz09_ gray.prefab using Guid(e3eede387629a0441b9709e2b5c3fc0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '681c39743ed9d2c9353535fd2cde92d0') in 0.041103 seconds 
