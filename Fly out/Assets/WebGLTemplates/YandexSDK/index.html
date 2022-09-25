@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>{{{ PRODUCT_NAME }}}</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+
+	<!-- Yandex.SDK -->
+	<script src="https://yandex.ru/games/sdk/v2"></script>
+	
+#if RTB_ID
+	<!-- Yandex.RTB -->
+    <script>window.yaContextCb=window.yaContextCb||[]</script>
+    <script src="https://yandex.ru/ads/system/context.js" async></script>
+	
+	<style>
+        #RTB {
+			position: fixed;
+            display: none;
+        }
+        #RTB.show {
+            display: block;
+        }
+    </style>
+#endif
+  </head>
+  <style> body { overflow: hidden; } </style>
+  <body>
+    <div id="unity-container" class="unity-desktop">
+      <canvas id="unity-canvas" width={{{ WIDTH }}}vw height={{{ HEIGHT }}}vh></canvas>
+      <div id="unity-loading-bar">
+        <div id="unity-logo"></div>
+        <div id="unity-progress-bar-empty">
+          <div id="unity-progress-bar-full"></div>
+        </div>
+      </div>
+    </div>
+#if RTB_ID
+	<div id = "RTB">
+        <div id="yandex_rtb_{{{ RTB_ID }}}"></div>
+        <script>
+          const rbt = document.querySelector('#RTB');
+
+          function renderRTB()
+          {
+            try{
+              window.yaContextCb.push(()=>{
+                Ya.Context.AdvManager.render({
+                  renderTo: 'yandex_rtb_{{{  RTB_ID  }}}',
+                  blockId: '{{{  RTB_ID  }}}',
+			      onRender: (data) => { console.log(data.product); }
+                })
+              })
+			  console.info('Banner loaded');
+            }
+            catch{
+              console.info('RTB Crash!');
+            }
+          }
+
+          function activityRTB(state){
+            if (state){
+              rbt.classList.add('show');
+            }
+            else{
+              rbt.classList.remove('show');
+            }
+          }
+
+          function recalculateRTB(_width, _height, _left, _top)
+          {
+            document.getElementById('RTB').style.width = _width;
+            document.getElementById('RTB').style.height = _height; 
+            document.getElementById('RTB').style.left = _left;
+            document.getElementById('RTB').style.top = _top;
+          }
+        </script>
+    </div>
+#endif
+    <script>
+      var container = document.querySelector("#unity-container");
+      var canvas = document.querySelector("#unity-canvas");
+      var loadingBar = document.querySelector("#unity-loading-bar");
+      var progressBarFull = document.querySelector("#unity-progress-bar-full");
+
+      var buildUrl = "Build";
+      var loaderUrl = buildUrl + "/{{{ LOADER_FILENAME }}}";
+      var config = {
+        dataUrl: buildUrl + "/{{{ DATA_FILENAME }}}",
+        frameworkUrl: buildUrl + "/{{{ FRAMEWORK_FILENAME }}}",
+        codeUrl: buildUrl + "/{{{ CODE_FILENAME }}}",
+#if MEMORY_FILENAME
+		memoryUrl: buildUrl + "/{{{ MEMORY_FILENAME }}}",
+#endif
+#if SYMBOLS_FILENAME
+		symbolsUrl: buildUrl + "/{{{ SYMBOLS_FILENAME }}}",
+#endif
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "{{{ COMPANY_NAME }}}",
+        productName: "{{{ PRODUCT_NAME }}}",
+        productVersion: "{{{ PRODUCT_VERSION }}}",
+      };
+
+      // By default Unity keeps WebGL canvas render target size matched with
+      // the DOM size of the canvas element (scaled by window.devicePixelRatio)
+      // Set this to false if you want to decouple this synchronization from
+      // happening inside the engine, and you would instead like to size up
+      // the canvas DOM size and WebGL render target sizes yourself.
+      // config.matchWebGLToCanvasSize = false;
+
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        // Mobile device style: fill the whole browser client area with the game canvas:
+
+        var meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+        document.getElementsByTagName('head')[0].appendChild(meta);
+        container.className = "unity-mobile";
+      }
+      
+      canvas.style.width = "{{{ WIDTH }}}vw";
+      canvas.style.height = "{{{ HEIGHT }}}vh";
+
+      loadingBar.style.display = "block";
+
+      var script = document.createElement("script");
+      script.src = loaderUrl;
+      script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+          progressBarFull.style.width = 100 * progress + "%";
+        }).then((unity) => {
+          loadingBar.style.display = "none";
+		  unityInstance = unity;
+		  unityInstance.SendMessage('YandexSDK', 'SetPrefferedLanguage', ysdk.environment.i18n.lang);
+        }).catch((message) => {
+          alert(message);
+        });
+      };
+      document.body.appendChild(script);
+    </script>
+	
+	<script type="text/javascript">
+	  var player;
+	  var ysdk;
+	  var lb;
+
+	  YaGames.init({
+		adv: {
+		  onAdvClose: wasShown => {
+			console.info('adv closed!', ysdk.environment.i18n.lang);
+		  }
+		}
+	  }).then(sdk => {
+		  ysdk = sdk;
+		  ysdk.adv.showFullscreenAdv({ callbacks: {} });
+		});
+	  
+	  function initPlayer() {
+		return ysdk.getPlayer().then(_player => {
+		  player = _player;
+		  
+		  return player;
+	    });
+	  }
+	  
+	  function autorization() {
+		initPlayer().then(_player => {
+			if (_player.getMode() === 'lite') {
+				console.log('Игрок не авторизован!');
+				ysdk.auth.openAuthDialog().then(() => {
+					initPlayer().catch(err => {
+						console.log('Ошибка авторизации пользователя!');
+					});
+				}).catch(() => {
+					console.log('Игрок не авторизован!');
+				});
+			}
+		});
+	  }
+	  
+	  function showInterAd() {
+		ysdk.adv.showFullscreenAdv({ callbacks: {} })
+	  }
+
+	  function showRewardAd() {
+		ysdk.adv.showRewardedVideo({
+		  callbacks: {
+			onOpen: () => {
+			  unityInstance.SendMessage('YandexSDK', 'OnOpen');
+			},
+			onRewarded: () => {
+			  unityInstance.SendMessage('YandexSDK', 'OnRewarded');
+			},
+			onClose: () => {
+			  unityInstance.SendMessage('YandexSDK', 'OnClose');
+			}, 
+			onError: (e) => {
+			  console.log('Error while open video ad:', e);
+			}
+		  }
+		})
+	  }
+	</script>
+  </body>
+</html>
