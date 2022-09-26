@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
     public UnityEvent onStartMenuGame;
     public UnityEvent onStartGame;
     public UnityEvent onPauseGame;
+    public UnityEvent onResumeGame;
+    public UnityEvent onRoundOver;
+    public UnityEvent onNextRound;
     public UnityEvent onGameOver;
     public UnityEvent onRestartGame;
 
@@ -18,6 +21,12 @@ public class GameManager : MonoBehaviour
     public void StartGame() => onStartGame?.Invoke();
 
     public void PauseGame() => onPauseGame?.Invoke();
+
+    public void ResumeGame() => onResumeGame?.Invoke();
+
+    public void RoundOver() => onRoundOver?.Invoke();
+
+    public void NextRound() => onNextRound.Invoke();
 
     public void GameOver() => onGameOver?.Invoke();
 
