@@ -4,35 +4,34 @@ using System.Collections;
 public class CarController : MonoBehaviour
 {
 
-    public WheelCollider[] WColForward;
-    public WheelCollider[] WColBack;
-    public float maxSteer = 30;
-    public float maxAccel = 25;
-    public float maxBrake = 50;
-    public Transform COM;
+    [SerializeField] private WheelCollider[] WColForward;
+    [SerializeField] private WheelCollider[] WColBack;
+    [SerializeField] private float maxSteer = 30;
+    [SerializeField] private float maxAccel = 2500;
+    [SerializeField] private float maxBrake = 50;
+    [SerializeField] private Transform COM;
 
-    void Start()
+    private void Start()
     {
         GetComponent<Rigidbody>().centerOfMass = COM.localPosition;
     }
 
-    void FixedUpdate()
+    private void Update()
     {
-        float accel = 0;
-        float steer = 0;
-        accel = Input.GetAxis("Vertical");
-        steer = Input.GetAxis("Horizontal");
-        CarMove(accel, steer);
+        Move(Input.GetAxis("Horizontal"));
+        Turn(Input.GetAxis("Vertical"));
     }
 
-    private void CarMove(float accel, float steer)
+    private void Move(float steer)
     {
-
         foreach (WheelCollider col in WColForward)
         {
             col.steerAngle = steer * maxSteer;
         }
+    }
 
+    private void Turn(float accel)
+    {
         if (accel == 0)
         {
             foreach (WheelCollider col in WColBack)
