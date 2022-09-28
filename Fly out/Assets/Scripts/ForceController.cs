@@ -10,8 +10,7 @@ public class ForceController : MonoBehaviour
 {
     [SerializeField] private TMP_Text magnitudePowerForceText;
     [SerializeField] private TMP_Text magnitudeAngleForceText;
-    //public UnityEvent<float> onChoicePowerFinished;
-    //public UnityEvent<float> onChoiceAngleFinished;
+    public UnityEvent<float, float> onChoiceForceFinished;
     private IEnumerator _choicePowerCoroutine;
     private IEnumerator _choiceAngleCoroutine;
     private bool _isChoicePowerForceFinished;
@@ -64,14 +63,13 @@ public class ForceController : MonoBehaviour
         {
             StopCoroutine(_choicePowerCoroutine);
             _isChoicePowerForceFinished = true;
-            //onChoicePowerFinished?.Invoke(float.Parse(magnitudePowerForceText.text));
         }
 
         else if (!_isChoiceAngleForceFinished)
         {
             StopCoroutine(_choiceAngleCoroutine);
             _isChoiceAngleForceFinished = true;
-            //onChoiceAngleFinished?.Invoke(float.Parse(magnitudeAngleForceText.text));
+            onChoiceForceFinished?.Invoke(float.Parse(magnitudePowerForceText.text), float.Parse(magnitudeAngleForceText.text));
         }
     }
 
