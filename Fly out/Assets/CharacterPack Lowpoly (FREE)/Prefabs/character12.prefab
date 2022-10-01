@@ -1952,7 +1952,6 @@ GameObject:
   - component: {fileID: 6727871046852282757}
   - component: {fileID: 846148718598673407}
   - component: {fileID: 9070637066644947726}
-  - component: {fileID: 6948478725793447337}
   - component: {fileID: -2710209118366085877}
   m_Layer: 0
   m_Name: character12
@@ -2012,24 +2011,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 977766bdc5be83d4d90583f0becc71d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!143 &6948478725793447337
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6203114470595908415}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &-2710209118366085877
 Rigidbody:
   m_ObjectHideFlags: 0

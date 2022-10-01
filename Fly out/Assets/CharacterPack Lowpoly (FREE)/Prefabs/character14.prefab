@@ -1886,7 +1886,6 @@ GameObject:
   - component: {fileID: 5970218416771328991}
   - component: {fileID: 304651377200312741}
   - component: {fileID: 7443672101429303425}
-  - component: {fileID: 1117887283989151730}
   - component: {fileID: 3660634508039162767}
   m_Layer: 0
   m_Name: character14
@@ -1946,24 +1945,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 977766bdc5be83d4d90583f0becc71d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!143 &1117887283989151730
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6454127380093350245}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &3660634508039162767
 Rigidbody:
   m_ObjectHideFlags: 0

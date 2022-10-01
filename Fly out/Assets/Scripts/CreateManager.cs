@@ -10,7 +10,7 @@ public class CreateManager : MonoBehaviour, IShoper
     public UnityEvent<GameObject> onCreateCharacter;
     [SerializeField] private Transform carSpawnPoint;
     [SerializeField] private GameObject characterSkin;
-    [SerializeField] private Vector3 offsetPositionSpawnCharacter = new Vector3(0, 0, 4f);
+    [SerializeField] private Vector3 offsetSpawnCharacter = new Vector3(0, 0, 4f);
     private GameObject _carSkin;
     private GameObject _car;
     private GameObject _character;
@@ -24,14 +24,14 @@ public class CreateManager : MonoBehaviour, IShoper
 
     public void CreateCharacter(float powerForce, float angleForce)
     {
-        _character = Instantiate(characterSkin, _car.transform.position + offsetPositionSpawnCharacter, characterSkin.transform.rotation);
-        var chatacterCh = _character.GetComponent<Character>();
+        _character = Instantiate(characterSkin, _car.transform.position + offsetSpawnCharacter, characterSkin.transform.rotation);
+        var chatacterCh = _character.GetComponent<CharacterPlayer>();
         chatacterCh.PowerStartForce = powerForce;
         chatacterCh.AngleStartForce = angleForce;
         chatacterCh.AngleTurnCarY = _car.transform.eulerAngles.y;
         onCreateCharacter?.Invoke(_character);
     }
-
+    
     public void DestroyCharacter() => Destroy(_character);
 
     public void OnSelect(GameObject carSkin) => _carSkin = carSkin;
