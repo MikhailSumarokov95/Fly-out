@@ -3,24 +3,34 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.EventSystems;
 using ToxicFamilyGames.AdsBrowser;
 
 public class ForceController : MonoBehaviour
 {
     [SerializeField] private TMP_Text magnitudePowerForceText;
     [SerializeField] private TMP_Text magnitudeAngleForceText;
+    [SerializeField] private float _factorChanges = 1;
     public UnityEvent<float, float> onChoiceForceFinished;
-    private IEnumerator _choicePowerCoroutine;
-    private IEnumerator _choiceAngleCoroutine;
+    private InputController _inputControler;
     private bool _isChoicePowerForceFinished;
     private bool _isChoiceAngleForceFinished;
-    private InputController _inputControler;
+    private bool _isChoicePowerForceStarted;
+    private bool _isChoiceAngleForceStarted;
+    private float _magnitudePowerForce;
+    private float _magnitudeAngleForce;
 
-    private void Awake()
+    private void Update()
     {
-        _choicePowerCoroutine = ChoiceMagnitude(magnitudePowerForceText);
-        _choiceAngleCoroutine = ChoiceMagnitude(magnitudeAngleForceText);
+        if (_isChoicePowerForceStarted)
+        {
+            _magnitudePowerForce += Time.deltaTime * _factorChanges;
+            magnitudePowerForceText.text = Mathf.PingPong(_magnitudePowerForce, 1).ToString();
+        }
+        else if (_isChoiceAngleForceStarted)
+        {
+            _magnitudeAngleForce += Time.deltaTime * _factorChanges;
+            magnitudeAngleForceText.text = Mathf.PingPong(_magnitudeAngleForce, 1).ToString();
+        }
     }
 
     public void RefreshValue()
@@ -28,7 +38,11 @@ public class ForceController : MonoBehaviour
         magnitudeAngleForceText.text = "0";
         magnitudePowerForceText.text = "0";
         _isChoicePowerForceFinished = false;
-        _isChoiceAngleForceFinished = false;
+        _isChoiceAngleForceFinished = false; 
+        _isChoicePowerForceStarted = false;
+        _isChoiceAngleForceStarted = false;
+        _magnitudeAngleForce = 0;
+        _magnitudePowerForce = 0;
     }
 
     public void FollowActionInputController()
@@ -42,7 +56,6 @@ public class ForceController : MonoBehaviour
     {
         _inputControler.onStartChoiceForce -= StartChoiceForce;
         _inputControler.onStopChoiceForce -= StopChoiceForce;
-        StopAllCoroutines();
     }
 
     private void ChoiceInputController()
@@ -53,46 +66,22 @@ public class ForceController : MonoBehaviour
 
     private void StartChoiceForce()
     {
-        if (!_isChoicePowerForceFinished) StartCoroutine(_choicePowerCoroutine);
-        else if (!_isChoiceAngleForceFinished) StartCoroutine(_choiceAngleCoroutine);
+        if (!_isChoicePowerForceFinished) _isChoicePowerForceStarted = true;
+        else if (!_isChoiceAngleForceFinished) _isChoiceAngleForceStarted = true;
     }
 
     private void StopChoiceForce()
     {
         if (!_isChoicePowerForceFinished)
         {
-            StopCoroutine(_choicePowerCoroutine);
+            _isChoicePowerForceStarted = false;
             _isChoicePowerForceFinished = true;
         }
-
         else if (!_isChoiceAngleForceFinished)
         {
-            StopCoroutine(_choiceAngleCoroutine);
+            _isChoiceAngleForceStarted = false;
             _isChoiceAngleForceFinished = true;
             onChoiceForceFinished?.Invoke(float.Parse(magnitudePowerForceText.text), float.Parse(magnitudeAngleForceText.text));
-        }
-    }
-
-    private IEnumerator ChoiceMagnitude(TMP_Text scaleText)
-    {
-        var amountValueChange = 0.02f;
-        var magnitude = 0f;
-        var isValueIncrease = true;
-        while (true)
-        {
-            if (isValueIncrease)
-            {
-                if (magnitude < 1f) magnitude += amountValueChange;
-                else isValueIncrease = false;
-            }
-
-            else
-            {
-                if (magnitude > 0f) magnitude -= amountValueChange;
-                else isValueIncrease = true;
-            }
-            scaleText.text = Mathf.Abs(magnitude).ToString();
-            yield return new WaitForSecondsRealtime(0.05f);
         }
     }
 }

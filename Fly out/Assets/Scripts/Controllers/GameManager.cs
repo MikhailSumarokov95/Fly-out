@@ -20,9 +20,17 @@ public class GameManager : MonoBehaviour
 
     public void StartGame() => onStartGame?.Invoke();
 
-    public void PauseGame() => onPauseGame?.Invoke();
+    public void PauseGame()
+    {
+        onPauseGame?.Invoke();
+        Time.timeScale = 0;
+    }
 
-    public void ResumeGame() => onResumeGame?.Invoke();
+    public void ResumeGame()
+    {
+        onResumeGame?.Invoke();
+        Time.timeScale = 1;
+    }
 
     public void RoundOver() => onRoundOver?.Invoke();
 

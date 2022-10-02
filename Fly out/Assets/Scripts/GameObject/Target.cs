@@ -9,7 +9,6 @@ public class Target : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        print("trigget");
         if (other.gameObject.tag == "Player") OnHitTarget?.Invoke(int.Parse(name));
     }
 }

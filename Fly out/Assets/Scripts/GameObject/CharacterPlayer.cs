@@ -18,4 +18,9 @@ public class CharacterPlayer : MonoBehaviour
         Mathf.Cos(AngleStartForce * Mathf.PI / 2) * Mathf.Cos(AngleTurnCarY * Mathf.Deg2Rad)) * PowerStartForce * factorForce;
         pointAddForce.AddForce(vectorForce, ForceMode.Impulse);
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Target") GetComponent<Rigidbody>().isKinematic = true;
+    }
 }
