@@ -35,7 +35,6 @@ public class CreateManager : MonoBehaviour, IShoper
         chatacterCh.AngleStartForce = angleForce;
         chatacterCh.AngleTurnCarY = _car.transform.eulerAngles.y;
         onCreateCharacter?.Invoke(_character[_character.Count - 1]);
-        Debug.Log(_character.Count);
     }
 
     public void DestroyCharacters()

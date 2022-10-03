@@ -2,14 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Events;
 
 public class Score : MonoBehaviour
 {
-    //[SerializeField] private Transform target;
+    public UnityEvent onCountedScore;
     [SerializeField] private TMP_Text scoreRoundText;
     [SerializeField] private TMP_Text scoreGameText;
-    private int _roundScore;
-    //[SerializeField] private Transform character;
+    private int _roundScore = -1;
+    private bool _isCountScore;
+    private float _timerDelayAfterCounting;
+    private float _delayAfterCounting = 1f;
+
+    private void Update()
+    {
+        if (_isCountScore) _timerDelayAfterCounting += Time.deltaTime;
+        if (_timerDelayAfterCounting > _delayAfterCounting)
+        {
+            _timerDelayAfterCounting = 0;
+            _isCountScore = false;
+            onCountedScore?.Invoke();   
+        }
+    }
 
     public void CountScore(int score)
     {
@@ -17,55 +31,25 @@ public class Score : MonoBehaviour
         {
             _roundScore = score;
             scoreRoundText.text = _roundScore.ToString();
+            _isCountScore = true;    
         }
     }
 
     public void NextRound()
     {
         scoreGameText.text = (int.Parse(scoreGameText.text) + _roundScore).ToString();
-        _roundScore = 0;
+        _roundScore = -1;
         scoreRoundText.text = "0";
+        _timerDelayAfterCounting = 0;
+        _isCountScore = false;
     }
 
     public void NextGame()
     {
-        _roundScore = 0;
+        _roundScore = -1;
         scoreRoundText.text = "0";
         scoreGameText.text = "0";
-    } 
-    //[ContextMenu("CountScore")]
-    //public void CountScore() //Transform character
-    //{
-    //    var targetPosition = target.position;
-    //    var distances = new List<float>();
-    //    var positionBodyParts = GetPositionChild(character);
-    //    foreach (Vector3 positionBodyPart in positionBodyParts)
-    //    {
-    //        distances.Add(Vector3.Magnitude(positionBodyPart - targetPosition));
-    //    }
-    //    var minDistance = FindMinValue(distances);
-    //    score.text = ((target.localScale.x / 2 - minDistance) /
-    //        (target.localScale.x / 200))
-    //        .ToString();
-    //}
-
-    //private List<Vector3> GetPositionChild(Transform parent)
-    //{
-    //    List<Vector3> positionChild = new List<Vector3>();
-    //    for (var i = 0; i < parent.childCount; i++)
-    //    {
-    //        positionChild.Add(parent.GetChild(i).position);
-    //    }
-    //    return positionChild;
-    //}
-
-    //private float FindMinValue(List<float> values)
-    //{
-    //    float minValues = float.MaxValue;
-    //    foreach (float score in values)
-    //    {
-    //        if (score < minValues) minValues = score;
-    //    }
-    //    return minValues;
-    //}
+        _timerDelayAfterCounting = 0;
+        _isCountScore = false;
+    }
 }

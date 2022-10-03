@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] private int numberOfRounds;
     public UnityEvent onStartMenuGame;
     public UnityEvent onStartGame;
     public UnityEvent onPauseGame;
@@ -13,6 +14,7 @@ public class GameManager : MonoBehaviour
     public UnityEvent onNextRound;
     public UnityEvent onGameOver;
     public UnityEvent onRestartGame;
+    private int _roundNumber;
 
     private void Start() => StartMenuGame();
 
@@ -32,7 +34,16 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
     }
 
-    public void RoundOver() => onRoundOver?.Invoke();
+    public void RoundOver()
+    {
+        _roundNumber++;
+        if (_roundNumber < numberOfRounds) onRoundOver?.Invoke();
+        else
+        {
+            _roundNumber = 0;
+            GameOver();
+        }
+    }
 
     public void NextRound() => onNextRound.Invoke();
 
