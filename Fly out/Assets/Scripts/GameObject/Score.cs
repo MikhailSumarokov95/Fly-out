@@ -9,10 +9,12 @@ public class Score : MonoBehaviour
     public UnityEvent onCountedScore;
     [SerializeField] private TMP_Text scoreRoundText;
     [SerializeField] private TMP_Text scoreGameText;
+    [SerializeField] private GameObject LeaderBoard;
     private int _roundScore = -1;
     private bool _isCountScore;
     private float _timerDelayAfterCounting;
-    private float _delayAfterCounting = 1f;
+    private LeaderBoard _leaderBoard;
+    readonly float _delayAfterCounting = 1f;
 
     private void Update()
     {
@@ -21,7 +23,10 @@ public class Score : MonoBehaviour
         {
             _timerDelayAfterCounting = 0;
             _isCountScore = false;
-            onCountedScore?.Invoke();   
+            onCountedScore?.Invoke();
+            LeaderBoard.SetActive(true);
+            if (_leaderBoard == null) _leaderBoard = FindObjectOfType<LeaderBoard>();
+            _leaderBoard.StartLeaderBoard(_roundScore);
         }
     }
 
@@ -31,7 +36,7 @@ public class Score : MonoBehaviour
         {
             _roundScore = score;
             scoreRoundText.text = _roundScore.ToString();
-            _isCountScore = true;    
+            _isCountScore = true;
         }
     }
 
@@ -42,6 +47,7 @@ public class Score : MonoBehaviour
         scoreRoundText.text = "0";
         _timerDelayAfterCounting = 0;
         _isCountScore = false;
+        LeaderBoard.SetActive(false);
     }
 
     public void NextGame()
@@ -51,5 +57,6 @@ public class Score : MonoBehaviour
         scoreGameText.text = "0";
         _timerDelayAfterCounting = 0;
         _isCountScore = false;
+        LeaderBoard.SetActive(false);
     }
 }

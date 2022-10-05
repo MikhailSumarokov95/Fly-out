@@ -9,77 +9,137 @@ using System.Text;
 public class LeaderBoard : MonoBehaviour
 {
     [SerializeField] private TMP_Text[] namesGamersTable;
-    [SerializeField] private TMP_Text[] resultsGamersTable;
-    private List<string> _namesGamers;
+    [SerializeField] private TMP_Text[] scoreGamersTable;
+    [SerializeField] private int maxScoreRound;
+    [SerializeField] private int minScoreRound;
+    private string[] _namesGamersOfLanguage;
+    private string _namePlayerOfLanguage;
+    private Gamers[] _gamers;
     private LanguageController _languageController;
 
     private void Start()
     {
         _languageController = FindObjectOfType<LanguageController>();
+        _namePlayerOfLanguage = GetNamePlayer(_languageController.SelectedLanguage);
+        _namesGamersOfLanguage = GetGamersNamesOfLanguage(_languageController.SelectedLanguage);
+        _gamers = new Gamers[namesGamersTable.Length];
     }
 
-    public void StartLeaderBoard()
+    public void CreateNewGamers()
     {
-        var namesOpponents = new string[9];
-        var language = _languageController.SelectedLanguage;
-        var playerNames =  GetPlayerNames(language);
-        for (int i = 0; i < 9; i++)
+        _gamers[0] = new Gamers { Name = _namePlayerOfLanguage, Score = 0 }; 
+        for (int i = 1; i < namesGamersTable.Length; i++)
         {
-            namesOpponents[i] = playerNames[Random.Range(0, playerNames.Length)];
-        }
-        foreach (string name in namesOpponents)
-        {
-            print(name);
+            _gamers[i] = new Gamers();
+            _gamers[i].Name = _namesGamersOfLanguage[Random.Range(0, _namesGamersOfLanguage.Length)];
+            _gamers[i].Score = 0;
         }
     }
 
-    public string[] GetPlayerNames(string language)
+    public void StartLeaderBoard(int scorePlayer)
     {
-        string names;
-        var filePath = Application.dataPath + "/Resources/NameGamers.json";
-        var playerNames = JsonUtility.FromJson<PlayerNames>(File.ReadAllText(filePath));
+        var minScore = minScoreRound / 10;
+        var maxScore = maxScoreRound / 10;
+        for (int i = 0; i < _gamers.Length; i++)
+        {
+            if (_gamers[i].Name == _namePlayerOfLanguage) _gamers[i].Score += scorePlayer;
+            else _gamers[i].Score += Random.Range(minScore, maxScore) * 10;
+        }
+        _gamers = SortGamers(_gamers);
+        for (int i = 0; i < _gamers.Length; i++)
+        {
+            namesGamersTable[i].text = _gamers[i].Name;
+            scoreGamersTable[i].text = _gamers[i].Score.ToString();
+        }
+    }
+
+    private Gamers[] SortGamers(Gamers[] gamers)
+    {
+        for (int i = 0; i < _gamers.Length - 1; i++)
+        {
+            int max = i;
+            for (int j = i + 1; j < gamers.Length; j++)
+            {
+                if (gamers[j].Score > gamers[max].Score)
+                {
+                    max = j;
+                }
+            }
+            Gamers temp = gamers[max];
+            gamers[max] = gamers[i];
+            gamers[i] = temp;
+        }
+        return gamers;
+    }
+
+    private string GetNamePlayer(string language)
+    {
         switch (language)
         {
             case "ru":
-                names = playerNames.ru;
-                break;
+                return "Вы";
             case "en":
-                names = playerNames.en;
-                break;
+                return "You";
             case "tr":
-                names = playerNames.tr;
-                break;
+                return "Sen";
             default:
-                names = playerNames.en;
-                break;
+                return "You";
         }
-        return ParceName(names);
     }
 
-    private string[] ParceName(string names)
+    private string[] GetGamersNamesOfLanguage(string language)
     {
-        var playerNames = new List<string>();
-        StringBuilder name = new StringBuilder();
-        for (int i = 0; i < names.Length; i++)
+        string namesOfLanguage;
+        var filePath = Application.dataPath + "/Resources/NameGamers.json";
+        var NamesOfPeoples = JsonUtility.FromJson<NamesOfPeoples>(File.ReadAllText(filePath));
+        switch (language)
         {
-            if (char.IsLetter(names[i]))
+            case "ru":
+                namesOfLanguage = NamesOfPeoples.ru;
+                break;
+            case "en":
+                namesOfLanguage = NamesOfPeoples.en;
+                break;
+            case "tr":
+                namesOfLanguage = NamesOfPeoples.tr;
+                break;
+            default:
+                namesOfLanguage = NamesOfPeoples.en;
+                break;
+        }
+        return ParceName(namesOfLanguage);
+    }
+
+    private string[] ParceName(string listNameInString)
+    {
+        var Names = new List<string>();
+        StringBuilder nameSB = new StringBuilder();
+        for (int i = 0; i < listNameInString.Length; i++)
+        {
+            if (char.IsLetter(listNameInString[i]))
             {
-                name.Append(names[i]);
+                nameSB.Append(listNameInString[i]);
             }
             else
             {
-                if (name.Length != 0)
+                if (nameSB.Length != 0)
                 {
-                    playerNames.Add(name.ToString());
-                    name.Clear();
+                    Names.Add(nameSB.ToString());
+                    nameSB.Clear();
                 }
             }
         }
-        return playerNames.ToArray();
+        return Names.ToArray();
+    }
+
+    private class Gamers
+    {
+        public int Score;
+        public string Name;
     }
 
     [System.Serializable]
-    public class PlayerNames
+    private class NamesOfPeoples
     {
         public string ru;
         public string en;
