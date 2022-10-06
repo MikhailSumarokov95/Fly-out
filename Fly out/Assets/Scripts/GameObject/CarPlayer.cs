@@ -35,7 +35,7 @@ public class CarPlayer : MonoBehaviour
 
     private void Turn(float accel)
     {
-        if (accel == 0)
+        if (accel < 0)
         {
             foreach (WheelCollider col in WColBack)
             {

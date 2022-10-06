@@ -18,13 +18,15 @@ public class Money : MonoBehaviour
 
     public void RewardingForGame()
     {
-        if (PlayerPositionInLeaderBoard >= rewardForPositionInGame.Length) return;
+        if (PlayerPositionInLeaderBoard >= rewardForPositionInGame.Length
+            || PlayerPositionInLeaderBoard < 1) return;
         ChangeAmountMoney(rewardForPositionInGame[PlayerPositionInLeaderBoard - 1]);
     }
 
     public void RewardingForRound()
     {
-        if (PlayerPositionInLeaderBoard >= rewardForPositionInRound.Length) return;
+        if (PlayerPositionInLeaderBoard >= rewardForPositionInRound.Length
+            || PlayerPositionInLeaderBoard < 1) return;
         ChangeAmountMoney(rewardForPositionInRound[PlayerPositionInLeaderBoard - 1]);
     }
 
