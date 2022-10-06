@@ -13,8 +13,10 @@ public class Camera : MonoBehaviour
         if (_target == null) return;
         float currentAngle = transform.eulerAngles.y;
         float desiredAngle = _target.eulerAngles.y;
-        Mathf.LerpAngle(currentAngle, desiredAngle, Time.deltaTime * damping);
-        transform.position = _target.position + (_target.rotation * offset);
+        //Mathf.LerpAngle(currentAngle, desiredAngle, Time.deltaTime * damping);
+        var currentPosition = transform.position;
+        var desiredPosition = _target.position + (_target.rotation * offset);
+        transform.position = Vector3.Slerp(currentPosition, desiredPosition, Time.deltaTime * damping);
         transform.LookAt(_target.transform);
     }
 

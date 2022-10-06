@@ -12,7 +12,6 @@ public class CharacterPlayer : MonoBehaviour
     public float AngleStartForce { get; set; }
     public float AngleTurnCarY { get; set; }
 
-
     private void Start()
     { 
         _score = FindObjectOfType<Score>();
@@ -27,13 +26,15 @@ public class CharacterPlayer : MonoBehaviour
         if (collision.gameObject.tag == "Target")
         {
             GetComponent<Rigidbody>().isKinematic = true;
-            _score.CountScore(int.Parse(collision.gameObject.name));
         }
         if (collision.gameObject.tag == "Ground")
         {
             _score.CountScore(0);
-            print("Ground");
         }
+    }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        _score.CountScore(int.Parse(other.gameObject.name));
     }
 }
