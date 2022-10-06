@@ -5,9 +5,11 @@ using UnityEngine;
 using ToxicFamilyGames.MenuEditor;
 using System.IO;
 using System.Text;
+using UnityEngine.Events;
 
 public class LeaderBoard : MonoBehaviour
 {
+    public UnityEvent onStartedLeaderBoard;
     [SerializeField] private TMP_Text[] namesGamersTable;
     [SerializeField] private TMP_Text[] scoreGamersTable;
     [SerializeField] private int maxScoreRound;
@@ -16,10 +18,12 @@ public class LeaderBoard : MonoBehaviour
     private string _namePlayerOfLanguage;
     private Gamers[] _gamers;
     private LanguageController _languageController;
+    private Money _money;
 
     private void Start()
     {
         _languageController = FindObjectOfType<LanguageController>();
+        _money = FindObjectOfType<Money>();
         _namePlayerOfLanguage = GetNamePlayer(_languageController.SelectedLanguage);
         _namesGamersOfLanguage = GetGamersNamesOfLanguage(_languageController.SelectedLanguage);
         _gamers = new Gamers[namesGamersTable.Length];
@@ -38,6 +42,8 @@ public class LeaderBoard : MonoBehaviour
 
     public void StartLeaderBoard(int scorePlayer)
     {
+        onStartedLeaderBoard?.Invoke();
+        var playerPositionInLeaderBoard = -1;
         var minScore = minScoreRound / 10;
         var maxScore = maxScoreRound / 10;
         for (int i = 0; i < _gamers.Length; i++)
@@ -48,9 +54,11 @@ public class LeaderBoard : MonoBehaviour
         _gamers = SortGamers(_gamers);
         for (int i = 0; i < _gamers.Length; i++)
         {
+            if (_gamers[i].Name == _namePlayerOfLanguage) playerPositionInLeaderBoard = i + 1;
             namesGamersTable[i].text = _gamers[i].Name;
             scoreGamersTable[i].text = _gamers[i].Score.ToString();
         }
+        _money.PlayerPositionInLeaderBoard = playerPositionInLeaderBoard;
     }
 
     private Gamers[] SortGamers(Gamers[] gamers)

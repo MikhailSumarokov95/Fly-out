@@ -1,40 +1,62 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class CharacterPlayer : MonoBehaviour
-{ 
+{
     [SerializeField] private Rigidbody pointAddForce;
     [SerializeField] private float factorForce = 500f;
-    private Score _score;
+    private LeaderBoard _leaderBoard;
+    private int _scoreTarget = -1;
+    private float _timerDelayAfterCounting;
+    private bool _isCrashedWithCollision;
+    readonly float _delayAfterCounting = 1f;
     public float PowerStartForce { get; set; }
     public float AngleStartForce { get; set; }
     public float AngleTurnCarY { get; set; }
 
+    private void Update()
+    {
+        if (_scoreTarget > -1) _timerDelayAfterCounting += Time.deltaTime;
+        if (_timerDelayAfterCounting > _delayAfterCounting)
+        {
+            _leaderBoard.StartLeaderBoard(_scoreTarget);
+            GetComponent<CharacterPlayer>().enabled = false;
+        }
+    }
+
     private void Start()
     { 
-        _score = FindObjectOfType<Score>();
+        _leaderBoard = FindObjectOfType<LeaderBoard>();
         var vectorForce = new Vector3(Mathf.Cos(AngleStartForce * Mathf.PI / 2) * Mathf.Sin(AngleTurnCarY * Mathf.Deg2Rad),
         Mathf.Sin(AngleStartForce * Mathf.PI / 2),
         Mathf.Cos(AngleStartForce * Mathf.PI / 2) * Mathf.Cos(AngleTurnCarY * Mathf.Deg2Rad)) * PowerStartForce * factorForce;
         pointAddForce.AddForce(vectorForce, ForceMode.Impulse);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public void OnCollisionEnter(Collision collision)
     {
+        if (_isCrashedWithCollision) return;
         if (collision.gameObject.tag == "Target")
         {
             GetComponent<Rigidbody>().isKinematic = true;
+            _isCrashedWithCollision = true;
         }
         if (collision.gameObject.tag == "Ground")
         {
-            _score.CountScore(0);
+            _leaderBoard.StartLeaderBoard(0);
+            GetComponent<CharacterPlayer>().enabled = false;
+            GetComponent<Rigidbody>().isKinematic = true;
+            _isCrashedWithCollision = true;
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
-        _score.CountScore(int.Parse(other.gameObject.name));
+        if (other.gameObject.tag == "Target")
+        {
+            if (_scoreTarget < int.Parse(other.gameObject.name)) 
+                _scoreTarget = int.Parse(other.gameObject.name);
+        }
     }
 }
