@@ -35,19 +35,21 @@ public class GameManager : MonoBehaviour
     }
 
     public void RoundOver()
-    { 
+    {
         _roundNumber++;
         if (_roundNumber < numberOfRounds) onRoundOver?.Invoke();
-        else
-        {
-            _roundNumber = 0;
-            GameOver();
-        }
+        else GameOver();
     }
 
     public void NextRound() => onNextRound.Invoke();
 
     public void GameOver() => onGameOver?.Invoke();
 
-    public void RestartGame() => onRestartGame?.Invoke();
+    public void RestartGame()
+    {
+        onRestartGame?.Invoke();
+        _roundNumber = 0;
+    }
+
+    public void AddRounds(int count) => _roundNumber += count;
 }

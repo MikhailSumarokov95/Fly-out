@@ -40,15 +40,16 @@ public class LeaderBoard : MonoBehaviour
         }
     }
 
-    public void StartLeaderBoard(int scorePlayer)
+    public void StartLeaderBoard(int scorePlayer, bool addScorePlayerOnly)
     {
-        onStartedLeaderBoard?.Invoke();
+        if (!addScorePlayerOnly) onStartedLeaderBoard?.Invoke();
         var playerPositionInLeaderBoard = -1;
         var minScore = minScoreRound / 10;
         var maxScore = maxScoreRound / 10;
         for (int i = 0; i < _gamers.Length; i++)
         {
             if (_gamers[i].Name == _namePlayerOfLanguage) _gamers[i].Score += scorePlayer;
+            else if (addScorePlayerOnly) continue;
             else _gamers[i].Score += Random.Range(minScore, maxScore) * 10;
         }
         _gamers = SortGamers(_gamers);
@@ -60,6 +61,8 @@ public class LeaderBoard : MonoBehaviour
         }
         _money.PlayerPositionInLeaderBoard = playerPositionInLeaderBoard;
     }
+
+    public void RewardPlayerScore(int score) => StartLeaderBoard(score, true);
 
     private Gamers[] SortGamers(Gamers[] gamers)
     {

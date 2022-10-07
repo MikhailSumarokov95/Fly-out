@@ -20,7 +20,7 @@ public class CharacterPlayer : MonoBehaviour
         if (_scoreTarget > -1) _timerDelayAfterCounting += Time.deltaTime;
         if (_timerDelayAfterCounting > _delayAfterCounting)
         {
-            _leaderBoard.StartLeaderBoard(_scoreTarget);
+            _leaderBoard.StartLeaderBoard(_scoreTarget, false);
             GetComponent<CharacterPlayer>().enabled = false;
         }
     }
@@ -44,7 +44,7 @@ public class CharacterPlayer : MonoBehaviour
         }
         if (collision.gameObject.tag == "Ground")
         {
-            _leaderBoard.StartLeaderBoard(0);
+            _leaderBoard.StartLeaderBoard(0, false);
             GetComponent<CharacterPlayer>().enabled = false;
             GetComponent<Rigidbody>().isKinematic = true;
             _isCrashedWithCollision = true;
