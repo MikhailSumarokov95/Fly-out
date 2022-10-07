@@ -35,19 +35,20 @@ public class CarPlayer : MonoBehaviour
 
     private void Turn(float accel)
     {
-        if (accel < 0)
-        {
-            foreach (WheelCollider col in WColBack)
-            {
-                col.brakeTorque = maxBrake;
-            }
-        }
-        else
+        if (accel != 0)
         {
             foreach (WheelCollider col in WColBack)
             {
                 col.brakeTorque = 0;
                 col.motorTorque = accel * maxAccel;
+            }
+ 
+        }
+        else
+        {
+            foreach (WheelCollider col in WColBack)
+            {
+                col.brakeTorque = maxBrake;
             }
         }
     }

@@ -882,15 +882,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 977766bdc5be83d4d90583f0becc71d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  partsBodyCharacter:
-  - {fileID: 390696324405616637}
-  - {fileID: 4737011837069777570}
-  - {fileID: 7701542958401919754}
-  - {fileID: 563910200343702340}
-  - {fileID: 6780459197603475831}
-  - {fileID: 6821778430511529666}
   pointAddForce: {fileID: 5795946607218420733}
-  factorForce: 2500
+  factorForce: 100
 --- !u!1 &2463673368411385488
 GameObject:
   m_ObjectHideFlags: 0
