@@ -16,7 +16,7 @@ public class CarPlayer : MonoBehaviour
         GetComponent<Rigidbody>().centerOfMass = COM.localPosition;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (IsBanContlorl) return;
         Move(Input.GetAxis("Horizontal"));
