@@ -556,7 +556,7 @@ MonoBehaviour:
   maxSteer: 10
   maxAccel: 1000
   maxBrake: 2000
-  COM: {fileID: 17897513}
+  centerOfMass: {fileID: 17897513}
 --- !u!1 &3962000127133956386
 GameObject:
   m_ObjectHideFlags: 0

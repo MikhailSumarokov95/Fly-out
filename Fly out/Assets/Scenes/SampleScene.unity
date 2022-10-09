@@ -2555,6 +2555,9 @@ MonoBehaviour:
   - gameObject: {fileID: 5634567978391406091, guid: 41d9dd3b8b783f14d902e7b6c4f73ec6, type: 3}
     price: 1000
     scaleRatio: 100
+  - gameObject: {fileID: 6511023548136919340, guid: 25b7b73499ac36c4d99262690f2d1f9c, type: 3}
+    price: 1000
+    scaleRatio: 100
   buyButton: {fileID: 1201187121}
   selectButton: {fileID: 1410405529}
 --- !u!114 &556183605
@@ -9196,7 +9199,7 @@ PrefabInstance:
     - target: {fileID: 661086505452680438, guid: d5a348b371d3be142a53f23a14ae034d, type: 3}
       propertyPath: events.Array.data[0].rewardAd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1460464538}
     - target: {fileID: 661086505452680438, guid: d5a348b371d3be142a53f23a14ae034d, type: 3}
       propertyPath: events.Array.data[0].rewardAd.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ToxicFamilyGames.AdsBrowser;
 
 public class CharacterPlayer : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class CharacterPlayer : MonoBehaviour
     private Rigidbody _characterPlayerRB;
     private bool _isPushed;
     private bool _isBannedPushing = true;
+    private bool _isMobile;
+    private VariableJoystick _variableJoystick;
     readonly float _delayAfterCounting = 1f;
     public float PowerStartForce { get; set; }
     public float AngleStartForce { get; set; }
@@ -22,11 +25,10 @@ public class CharacterPlayer : MonoBehaviour
     private void Start()
     {
         _leaderBoard = FindObjectOfType<LeaderBoard>();
-        var vectorForce = new Vector3(Mathf.Cos(AngleStartForce * Mathf.PI / 2) * Mathf.Sin(AngleTurnCarY * Mathf.Deg2Rad),
-        Mathf.Sin(AngleStartForce * Mathf.PI / 2),
-        Mathf.Cos(AngleStartForce * Mathf.PI / 2) * Mathf.Cos(AngleTurnCarY * Mathf.Deg2Rad)) * PowerStartForce * factorForceFlyFormCar;
-        pointAddForce.AddForce(vectorForce, ForceMode.Impulse);
+        FlyOutCar();
         _characterPlayerRB = GetComponent<Rigidbody>();
+        _isMobile = YandexSDK.instance.isMobile();
+        if (_isMobile) _variableJoystick = FindObjectOfType<VariableJoystick>();
     }
 
     private void Update()
@@ -37,12 +39,22 @@ public class CharacterPlayer : MonoBehaviour
             _leaderBoard.StartLeaderBoard(_scoreTarget, false);
             GetComponent<CharacterPlayer>().enabled = false;
         }
-        if (!_isPushed) Move();
+        if (!_isPushed) Push();
     }
 
-    private void Move()
+    private void FlyOutCar()
     {
-        Vector2 direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized;
+        var vectorForce = new Vector3(Mathf.Cos(AngleStartForce * Mathf.PI / 2) * Mathf.Sin(AngleTurnCarY * Mathf.Deg2Rad),
+            Mathf.Sin(AngleStartForce * Mathf.PI / 2),
+            Mathf.Cos(AngleStartForce * Mathf.PI / 2) * Mathf.Cos(AngleTurnCarY * Mathf.Deg2Rad)) * PowerStartForce * factorForceFlyFormCar;
+        pointAddForce.AddForce(vectorForce, ForceMode.Impulse);
+    }
+
+    private void Push()
+    {
+        Vector2 direction;
+        if (_isMobile) direction = _variableJoystick.Direction;
+        else direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized;
         if (_isBannedPushing)
         {
             _isBannedPushing = !(direction.magnitude == 0);
