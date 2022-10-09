@@ -3,12 +3,14 @@ using System.Linq;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 //PlayerPrefs money
 namespace ToxicFamilyGames.MenuEditor
 {
     public class Shop : MonoBehaviour
     {
+        [SerializeField] private UnityEvent<int> onBuySkin;
         [SerializeField] private Transform itemTransform;
         [SerializeField] private Item[] items;
         [SerializeField, Header("Êíîïêè")] private GameObject buyButton;
@@ -18,8 +20,7 @@ namespace ToxicFamilyGames.MenuEditor
         public static int Money
         {
             get { return PlayerPrefs.GetInt("money", 0); }
-            set { PlayerPrefs.SetInt("money", value); }
-        }
+            set { PlayerPrefs.SetInt("money", value); } }
 
         public bool IsBuySelectedItem
         {
@@ -83,7 +84,7 @@ namespace ToxicFamilyGames.MenuEditor
         {
             if (Money - items[indexShowingItem].price >= 0)
             {
-                Money -= items[indexShowingItem].price;
+                onBuySkin?.Invoke(items[indexShowingItem].price);
                 PlayerPrefs.SetInt(items[indexShowingItem].gameObject.name, 1);
                 InitButtons();
                 SelectItem();

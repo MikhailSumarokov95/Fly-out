@@ -16,11 +16,24 @@ public class GameManager : MonoBehaviour
     public UnityEvent onRestartGame;
     private int _roundNumber;
 
-    private void Start() => StartMenuGame();
+    private void Start()
+    {
+        StartMenuGame();
+        Time.timeScale = 0;
+    }
 
-    public void StartMenuGame() => onStartMenuGame?.Invoke();
+    public void StartMenuGame()
+    {
+        onStartMenuGame?.Invoke();
+        Time.timeScale = 0;
+    }
 
-    public void StartGame() => onStartGame?.Invoke();
+    public void StartGame()
+    {
+        onStartGame?.Invoke();
+        Time.timeScale = 1;
+        _roundNumber = 0;
+    }
 
     public void PauseGame()
     {
@@ -49,6 +62,7 @@ public class GameManager : MonoBehaviour
     {
         onRestartGame?.Invoke();
         _roundNumber = 0;
+        Time.timeScale = 1;
     }
 
     public void AddRounds(int count) => _roundNumber += count;
