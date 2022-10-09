@@ -883,7 +883,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointAddForce: {fileID: 5795946607218420733}
-  factorForce: 100
+  factorForceFlyFormCar: 100
+  factorForceTaxiing: 40000
 --- !u!1 &2463673368411385488
 GameObject:
   m_ObjectHideFlags: 0
