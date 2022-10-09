@@ -8,6 +8,10 @@ public class CharacterPlayer : MonoBehaviour
     [SerializeField] private Rigidbody pointAddForce;
     [SerializeField] private float factorForceFlyFormCar = 500f;
     [SerializeField] private float factorForceTaxiing = 10000;
+    [SerializeField] private GameObject glassSound;
+    [SerializeField] private GameObject cryDriversSound;
+    [SerializeField] private GameObject ApplauseSound;
+    private GameObject _cryDriversSoundPlaying;
     private LeaderBoard _leaderBoard;
     private int _scoreTarget = -1;
     private float _timerDelayAfterCounting;
@@ -48,6 +52,11 @@ public class CharacterPlayer : MonoBehaviour
             Mathf.Sin(AngleStartForce * Mathf.PI / 2),
             Mathf.Cos(AngleStartForce * Mathf.PI / 2) * Mathf.Cos(AngleTurnCarY * Mathf.Deg2Rad)) * PowerStartForce * factorForceFlyFormCar;
         pointAddForce.AddForce(vectorForce, ForceMode.Impulse);
+
+        var glassSoundPlaying = Instantiate(glassSound);
+        Destroy(glassSoundPlaying, glassSoundPlaying.GetComponent<AudioSource>().clip.length);
+        var cryDriversSoundPlaying = Instantiate(cryDriversSound);
+        Destroy(cryDriversSoundPlaying, cryDriversSoundPlaying.GetComponent<AudioSource>().clip.length);
     }
 
     private void Push()
@@ -64,20 +73,26 @@ public class CharacterPlayer : MonoBehaviour
         _isPushed = direction.magnitude != 0;
     }
 
+    private void OnCharacterCrashed()
+    {
+        GetComponent<Rigidbody>().isKinematic = true;
+        _isCrashedWithCollision = true;
+        var applauseSoundPlaying = Instantiate(ApplauseSound);
+        Destroy(applauseSoundPlaying, applauseSoundPlaying.GetComponent<AudioSource>().clip.length);
+    }
+
     public void OnCollisionEnter(Collision collision)
     {
         if (_isCrashedWithCollision) return;
         if (collision.gameObject.tag == "Target")
         {
-            GetComponent<Rigidbody>().isKinematic = true;
-            _isCrashedWithCollision = true;
+            OnCharacterCrashed();
         }
         if (collision.gameObject.tag == "Ground")
         {
             _leaderBoard.StartLeaderBoard(0, false);
+            OnCharacterCrashed();
             GetComponent<CharacterPlayer>().enabled = false;
-            GetComponent<Rigidbody>().isKinematic = true;
-            _isCrashedWithCollision = true;
         }
     }
 

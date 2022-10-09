@@ -885,6 +885,9 @@ MonoBehaviour:
   pointAddForce: {fileID: 5795946607218420733}
   factorForceFlyFormCar: 100
   factorForceTaxiing: 40000
+  glassSound: {fileID: 722532245432119168, guid: 630cb59e7e663e645825839da9a9c303, type: 3}
+  cryDriversSound: {fileID: 3287602275219008581, guid: 78dae18df3a4d2a40b9e8a293c12ad66, type: 3}
+  ApplauseSound: {fileID: 1747763942004759626, guid: 63a1d858dbff1c14584fb059e2651129, type: 3}
 --- !u!1 &2463673368411385488
 GameObject:
   m_ObjectHideFlags: 0
