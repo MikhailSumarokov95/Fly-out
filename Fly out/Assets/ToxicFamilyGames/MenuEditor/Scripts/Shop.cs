@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using TMPro;
 
 //PlayerPrefs money
 namespace ToxicFamilyGames.MenuEditor
@@ -13,8 +14,10 @@ namespace ToxicFamilyGames.MenuEditor
         [SerializeField] private UnityEvent<int> onBuySkin;
         [SerializeField] private Transform itemTransform;
         [SerializeField] private Item[] items;
+        [SerializeField] private TMP_Text priceText;
         [SerializeField, Header("Кнопки")] private GameObject buyButton;
         [SerializeField] private GameObject selectButton;
+
 
         private int indexShowingItem = 0;
         public static int Money
@@ -54,6 +57,7 @@ namespace ToxicFamilyGames.MenuEditor
         {
             DestroyItem();
             GameObject item = Instantiate(items[indexShowingItem].gameObject, itemTransform);
+            priceText.text = items[indexShowingItem].price.ToString();
             MonoBehaviour[] components = item.GetComponents<MonoBehaviour>();
             for (int i = 0; i < components.Length; i++)
             {
