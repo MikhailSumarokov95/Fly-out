@@ -23,7 +23,7 @@ public class CreateManager : MonoBehaviour, IShoper
     public void CreateCar()
     {
         if (_car != null) Destroy(_car);
-        _car = Instantiate(_carSkin, carSpawnPoint.position, _carSkin.transform.rotation);
+        _car = Instantiate(_carSkin, carSpawnPoint.position + _carSkin.transform.position, _carSkin.transform.rotation);
         onCreateCar?.Invoke(_car);
     } 
 
