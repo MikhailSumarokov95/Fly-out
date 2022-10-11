@@ -4,8 +4,10 @@ using ToxicFamilyGames.AdsBrowser;
 
 public class CarPlayer : MonoBehaviour
 {
-    [SerializeField] private WheelCollider[] WColForward;
-    [SerializeField] private WheelCollider[] WColBack;
+    [SerializeField] private WheelCollider frontLeftWhellCollider;
+    [SerializeField] private WheelCollider frontRightWhellCollider;
+    [SerializeField] private WheelCollider rearLeftWhellCollider;
+    [SerializeField] private WheelCollider rearRightWhellCollider;
     [SerializeField] private float maxSteer = 30;
     [SerializeField] private float maxAccel = 2500;
     [SerializeField] private float maxBrake = 50;
@@ -40,29 +42,28 @@ public class CarPlayer : MonoBehaviour
 
     private void Move(float steer)
     {
-        foreach (WheelCollider col in WColForward)
-        {
-            col.steerAngle = steer * maxSteer;
-        }
+        frontLeftWhellCollider.steerAngle = 
+            frontRightWhellCollider.steerAngle = steer * maxSteer;
     }
 
     private void Turn(float accel)
     {
         if (accel != 0)
         {
-            foreach (WheelCollider col in WColBack)
-            {
-                col.brakeTorque = 0;
-                col.motorTorque = accel * maxAccel;
-            }
- 
+            frontLeftWhellCollider.brakeTorque =
+                frontRightWhellCollider.brakeTorque =
+                    rearLeftWhellCollider.brakeTorque =
+                        rearRightWhellCollider.brakeTorque = 0;
+
+            frontLeftWhellCollider.motorTorque =
+                 frontRightWhellCollider.motorTorque = accel * maxAccel;
         }
         else
         {
-            foreach (WheelCollider col in WColBack)
-            {
-                col.brakeTorque = maxBrake;
-            }
+            frontLeftWhellCollider.brakeTorque =
+                frontRightWhellCollider.brakeTorque =
+                    rearLeftWhellCollider.brakeTorque =
+                        rearRightWhellCollider.brakeTorque = maxBrake;
         }
     }
 }
