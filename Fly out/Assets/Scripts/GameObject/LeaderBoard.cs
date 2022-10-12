@@ -101,8 +101,10 @@ public class LeaderBoard : MonoBehaviour
     private string[] GetGamersNamesOfLanguage(string language)
     {
         string namesOfLanguage;
-        var filePath = Application.dataPath + "/Resources/NameGamers.json";
-        var NamesOfPeoples = JsonUtility.FromJson<NamesOfPeoples>(File.ReadAllText(filePath));
+        var namesOfPeoplesJson = Resources.Load<TextAsset>("NameGamers");
+        var NamesOfPeoples = JsonUtility.FromJson<NamesOfPeoples>(namesOfPeoplesJson.ToString());
+        //var filePath = Application.dataPath + "/Resources/NameGamers.json";
+        //var NamesOfPeoples = JsonUtility.FromJson<NamesOfPeoples>(File.ReadAllText(filePath));
         switch (language)
         {
             case "ru":
