@@ -3272,33 +3272,18 @@ MonoBehaviour:
   itemTransform: {fileID: 1351331505}
   items:
   - gameObject: {fileID: 2259411365073334115, guid: 76973b715eb8432499748821fbc86a11, type: 3}
-    price: 200
-    scaleRatio: 100
-  - gameObject: {fileID: 1744851867669802, guid: b2f783f0bf9936a43ab99739f5c6aabb, type: 3}
-    price: 4000
+    price: 0
     scaleRatio: 100
   - gameObject: {fileID: 7127868053142509984, guid: 4080e309b46c81b46a9129ff6ba9e280, type: 3}
     price: 5000
     scaleRatio: 100
   - gameObject: {fileID: 5634567978391406091, guid: 41d9dd3b8b783f14d902e7b6c4f73ec6, type: 3}
-    price: 5000
-    scaleRatio: 100
-  - gameObject: {fileID: 1210380892438594, guid: d31c2978b3c532641849461176196ffc, type: 3}
-    price: 5000
-    scaleRatio: 100
-  - gameObject: {fileID: 1461060400374886, guid: 38bffec2b52c8d549b57b30403127884, type: 3}
-    price: 5000
-    scaleRatio: 100
-  - gameObject: {fileID: 1633565836025704, guid: 5fe2d0c555ffed74cb794c4de5eea923, type: 3}
-    price: 10000
+    price: 5018
     scaleRatio: 100
   - gameObject: {fileID: 1380036574070504, guid: 46061d83d9ec9e74f948ce797eb4cd10, type: 3}
     price: 15000
     scaleRatio: 100
   - gameObject: {fileID: 1422279898769394, guid: e688bed69d182694cb389c0059670a0c, type: 3}
-    price: 20000
-    scaleRatio: 100
-  - gameObject: {fileID: 1886725078683334, guid: a090f32670d818746913bfb5af39674f, type: 3}
     price: 20000
     scaleRatio: 100
   - gameObject: {fileID: 6511023548136919340, guid: 25b7b73499ac36c4d99262690f2d1f9c, type: 3}
@@ -5590,7 +5575,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -6809,6 +6794,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 99790415735080057, guid: 712dd32a827ef0348aebda7445cdbd4a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.56
+      objectReference: {fileID: 0}
     - target: {fileID: 99878130964948411, guid: 712dd32a827ef0348aebda7445cdbd4a, type: 3}
       propertyPath: m_TagString
       value: Ground
