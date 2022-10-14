@@ -3625,7 +3625,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 86746315}
         m_TargetAssemblyTypeName: ForceController, Assembly-CSharp
-        m_MethodName: RefreshValue
+        m_MethodName: ResetPower
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3634,18 +3634,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 86746315}
-        m_TargetAssemblyTypeName: ForceController, Assembly-CSharp
-        m_MethodName: FollowActionInputController
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1658294454}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
@@ -3700,15 +3688,15 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 86746315}
         m_TargetAssemblyTypeName: ForceController, Assembly-CSharp
-        m_MethodName: DontFollowActionInputController
-        m_Mode: 1
+        m_MethodName: PauseSelectPower
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1658294454}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
@@ -3739,8 +3727,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 86746315}
         m_TargetAssemblyTypeName: ForceController, Assembly-CSharp
-        m_MethodName: FollowActionInputController
-        m_Mode: 1
+        m_MethodName: PauseSelectPower
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3776,18 +3764,6 @@ MonoBehaviour:
   onRoundOver:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 86746315}
-        m_TargetAssemblyTypeName: ForceController, Assembly-CSharp
-        m_MethodName: DontFollowActionInputController
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 580295985}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -3829,7 +3805,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 86746315}
         m_TargetAssemblyTypeName: ForceController, Assembly-CSharp
-        m_MethodName: RefreshValue
+        m_MethodName: ResetPower
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3899,18 +3875,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 86746315}
-        m_TargetAssemblyTypeName: ForceController, Assembly-CSharp
-        m_MethodName: FollowActionInputController
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1658294454}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -3964,7 +3928,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 86746315}
         m_TargetAssemblyTypeName: ForceController, Assembly-CSharp
-        m_MethodName: DontFollowActionInputController
+        m_MethodName: ResetPower
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3991,7 +3955,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 86746315}
         m_TargetAssemblyTypeName: ForceController, Assembly-CSharp
-        m_MethodName: RefreshValue
+        m_MethodName: ResetPower
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4064,18 +4028,6 @@ MonoBehaviour:
       - m_Target: {fileID: 1460464538}
         m_TargetAssemblyTypeName: Money, Assembly-CSharp
         m_MethodName: RewardingForGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 86746315}
-        m_TargetAssemblyTypeName: ForceController, Assembly-CSharp
-        m_MethodName: FollowActionInputController
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13136,10 +13088,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1681026904}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c3ebb2d1934d32459d9658ee02fcdb0, type: 3}
+  m_Script: {fileID: 11500000, guid: 8dd5cc1f742ea3f4bb5ec690ec804aa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KeyChoiceForce: 32
 --- !u!1 &1685184543
 GameObject:
   m_ObjectHideFlags: 0
@@ -13499,7 +13450,7 @@ GameObject:
   - component: {fileID: 1989545609}
   - component: {fileID: 1989545608}
   m_Layer: 5
-  m_Name: InputControler
+  m_Name: TouchController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

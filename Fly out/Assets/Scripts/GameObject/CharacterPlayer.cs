@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using ToxicFamilyGames.AdsBrowser;
 
 public class CharacterPlayer : MonoBehaviour
 {
@@ -11,7 +10,6 @@ public class CharacterPlayer : MonoBehaviour
     [SerializeField] private GameObject glassSound;
     [SerializeField] private GameObject cryDriversSound;
     [SerializeField] private GameObject ApplauseSound;
-    private GameObject _cryDriversSoundPlaying;
     private LeaderBoard _leaderBoard;
     private int _scoreTarget = -1;
     private float _timerDelayAfterCounting;
@@ -19,11 +17,13 @@ public class CharacterPlayer : MonoBehaviour
     private Rigidbody _characterPlayerRB;
     private bool _isPushed;
     private bool _isBannedPushing = true;
-    private bool _isMobile;
-    private VariableJoystick _variableJoystick;
+    private InputController _inputController;
     readonly float _delayAfterCounting = 1f;
+
     public float PowerStartForce { get; set; }
+
     public float AngleStartForce { get; set; }
+
     public float AngleTurnCarY { get; set; }
 
     private void Start()
@@ -31,8 +31,7 @@ public class CharacterPlayer : MonoBehaviour
         _leaderBoard = FindObjectOfType<LeaderBoard>();
         FlyOutCar();
         _characterPlayerRB = GetComponent<Rigidbody>();
-        _isMobile = YandexSDK.instance.isMobile();
-        if (_isMobile) _variableJoystick = FindObjectOfType<VariableJoystick>();
+        _inputController = FindObjectOfType<InputController>();
     }
 
     private void Update()
@@ -43,7 +42,7 @@ public class CharacterPlayer : MonoBehaviour
             _leaderBoard.StartLeaderBoard(_scoreTarget, false);
             GetComponent<CharacterPlayer>().enabled = false;
         }
-        if (!_isPushed) Push();
+        if (!_isPushed) Push(new Vector2(_inputController.Horizontal, _inputController.Vertical).normalized);
     }
 
     private void FlyOutCar()
@@ -59,11 +58,8 @@ public class CharacterPlayer : MonoBehaviour
         Destroy(cryDriversSoundPlaying, cryDriversSoundPlaying.GetComponent<AudioSource>().clip.length);
     }
 
-    private void Push()
+    private void Push(Vector2 direction)
     {
-        Vector2 direction;
-        if (_isMobile) direction = _variableJoystick.Direction;
-        else direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized;
         if (_isBannedPushing)
         {
             _isBannedPushing = !(direction.magnitude == 0);

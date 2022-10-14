@@ -1,6 +1,5 @@
 using UnityEngine;
 using System.Collections;
-using ToxicFamilyGames.AdsBrowser;
 
 public class CarPlayer : MonoBehaviour
 {
@@ -13,29 +12,20 @@ public class CarPlayer : MonoBehaviour
     [SerializeField] private float maxBrake = 50;
     [SerializeField] private Transform centerOfMass;
     private bool _isBanControl;
-    private bool _isMobile;
-    private VariableJoystick _variableJoystick;
+    private InputController _inputController;
+
 
     private void Start()
     {
         GetComponent<Rigidbody>().centerOfMass = centerOfMass.localPosition;
-        _isMobile = YandexSDK.instance.isMobile();
-        if (_isMobile) _variableJoystick = FindObjectOfType<VariableJoystick>();
+        _inputController = FindObjectOfType<InputController>();
     }
 
     private void FixedUpdate()
     {
         if (_isBanControl) return;
-        if (_isMobile)
-        {
-            Move(_variableJoystick.Horizontal);
-            Turn(_variableJoystick.Vertical);
-        }
-        else
-        {
-            Move(Input.GetAxis("Horizontal"));
-            Turn(Input.GetAxis("Vertical"));
-        }
+        Move(_inputController.Horizontal);
+        Turn(_inputController.Vertical);
     }
 
     public void BanControl() => _isBanControl = true;

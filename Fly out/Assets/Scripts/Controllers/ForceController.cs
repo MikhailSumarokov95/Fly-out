@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
-using ToxicFamilyGames.AdsBrowser;
 
 public class ForceController : MonoBehaviour
 {
@@ -12,76 +11,55 @@ public class ForceController : MonoBehaviour
     [SerializeField] private float _factorChanges = 1;
     public UnityEvent<float, float> onChoiceForceFinished;
     private InputController _inputControler;
-    private bool _isChoicePowerForceFinished;
-    private bool _isChoiceAngleForceFinished;
-    private bool _isChoicePowerForceStarted;
-    private bool _isChoiceAngleForceStarted;
     private float _magnitudePowerForce;
     private float _magnitudeAngleForce;
+    private bool _isBanedCoroutineSelectForce;
+    private bool _isPausedSelectForce;
+
+    private void Start()
+    {
+        _inputControler = FindObjectOfType<InputController>();
+    }
 
     private void Update()
     {
-        if (_isChoicePowerForceStarted)
+        if (_inputControler.TouchDownForSelectForce && !_isBanedCoroutineSelectForce)
+            StartCoroutine("SelectForce");
+    }
+
+    public void PauseSelectPower(bool value) => _isPausedSelectForce = value;
+
+    public void ResetPower()
+    {
+        _magnitudePowerForce = 0;
+        _magnitudeAngleForce = 0;
+        magnitudePowerForceText.text = "0";
+        magnitudeAngleForceText.text = "0";
+        _isBanedCoroutineSelectForce = false;
+        _isPausedSelectForce = false;
+        StopCoroutine("SelectForce");
+    }
+
+    private IEnumerator SelectForce()
+    { 
+        _isBanedCoroutineSelectForce = true;
+        while (!_inputControler.TouchUpForSelectForce)
         {
+            if (_isPausedSelectForce) yield return null;
             _magnitudePowerForce += Time.deltaTime * _factorChanges;
             magnitudePowerForceText.text = Mathf.PingPong(_magnitudePowerForce, 1).ToString();
+            yield return null;
         }
-        else if (_isChoiceAngleForceStarted)
+
+        yield return new WaitUntil(() => _inputControler.TouchDownForSelectForce);
+
+        while (!_inputControler.TouchUpForSelectForce)
         {
+            if (_isPausedSelectForce) yield return null;
             _magnitudeAngleForce += Time.deltaTime * _factorChanges;
             magnitudeAngleForceText.text = Mathf.PingPong(_magnitudeAngleForce, 1).ToString();
+            yield return null;
         }
-    }
-
-    public void RefreshValue()
-    {
-        magnitudeAngleForceText.text = "0";
-        magnitudePowerForceText.text = "0";
-        _isChoicePowerForceFinished = false;
-        _isChoiceAngleForceFinished = false; 
-        _isChoicePowerForceStarted = false;
-        _isChoiceAngleForceStarted = false;
-        _magnitudeAngleForce = 0;
-        _magnitudePowerForce = 0;
-    }
-
-    public void FollowActionInputController()
-    {
-        if (_inputControler == null) ChoiceInputController();
-        _inputControler.onStartChoiceForce += StartChoiceForce;
-        _inputControler.onStopChoiceForce += StopChoiceForce;
-    }
-
-    public void DontFollowActionInputController()
-    {
-        _inputControler.onStartChoiceForce -= StartChoiceForce;
-        _inputControler.onStopChoiceForce -= StopChoiceForce;
-    }
-
-    private void ChoiceInputController()
-    {
-        if (YandexSDK.instance.isMobile()) _inputControler = FindObjectOfType<InputControllerMobile>();
-        else _inputControler = FindObjectOfType<InputControllerPC>();
-    }
-
-    private void StartChoiceForce()
-    {
-        if (!_isChoicePowerForceFinished) _isChoicePowerForceStarted = true;
-        else if (!_isChoiceAngleForceFinished) _isChoiceAngleForceStarted = true;
-    }
-
-    private void StopChoiceForce()
-    {
-        if (!_isChoicePowerForceFinished)
-        {
-            _isChoicePowerForceStarted = false;
-            _isChoicePowerForceFinished = true;
-        }
-        else if (!_isChoiceAngleForceFinished)
-        {
-            _isChoiceAngleForceStarted = false;
-            _isChoiceAngleForceFinished = true;
-            onChoiceForceFinished?.Invoke(float.Parse(magnitudePowerForceText.text), float.Parse(magnitudeAngleForceText.text));
-        }
+        onChoiceForceFinished?.Invoke(_magnitudePowerForce, _magnitudeAngleForce);
     }
 }
