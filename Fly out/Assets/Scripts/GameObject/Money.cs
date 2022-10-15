@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -8,15 +9,20 @@ public class Money : MonoBehaviour
     [SerializeField] private int[] rewardForPositionInGame;
     [SerializeField] private int[] rewardForPositionInRound;
     [SerializeField] private TMP_Text[] moneyTexts;
+    [SerializeField] private TMP_Text rewardMoneyText;
 
-    public int PlayerPositionInLeaderBoard { get; set; } 
+    public int PlayerPositionInLeaderBoard { get; set; }
 
     private void Start()
     {
-        foreach (var moneyText in moneyTexts)
-        {
+        foreach (var moneyText in moneyTexts) 
             moneyText.text = PlayerPrefs.GetInt("money", 0).ToString();
-        }
+    }
+
+    private void Update()
+    {
+        if (rewardMoneyText.gameObject.activeInHierarchy) rewardMoneyText.color -= new Color(0, 0, 0, 0.01f);
+        rewardMoneyText.gameObject.SetActive(rewardMoneyText.color.a > 0.1f);
     }
 
     public void RewardingForGame()
@@ -41,9 +47,10 @@ public class Money : MonoBehaviour
     {
         var money = PlayerPrefs.GetInt("money", 0) + value;
         PlayerPrefs.SetInt("money", money);
-        foreach(var moneyText in moneyTexts)
-        {
-            moneyText.text = money.ToString();
-        }
+        foreach(var moneyText in moneyTexts) moneyText.text = money.ToString();
+        rewardMoneyText.gameObject.SetActive(true);
+        var sign = Math.Sign(value) > 0 ? "+" : "-"; 
+        rewardMoneyText.text = sign + value.ToString();
+        rewardMoneyText.color += new Color(0, 0, 0, 1);
     }
 }
