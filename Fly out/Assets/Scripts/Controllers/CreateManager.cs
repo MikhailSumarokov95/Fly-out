@@ -29,7 +29,7 @@ public class CreateManager : MonoBehaviour, IShoper
 
     public void CreateCharacter(float powerForce, float angleForce)
     {
-        _character.Add(Instantiate(characterSkin, _car.transform.position + offsetSpawnCharacter, characterSkin.transform.rotation));
+        _character.Add(Instantiate(characterSkin, _car.transform.position + offsetSpawnCharacter, Quaternion.Euler(60, _car.transform.eulerAngles.y, 0)));
         var chatacterCh = _character[_character.Count - 1].GetComponent<CharacterPlayer>();
         chatacterCh.PowerStartForce = powerForce * _car.GetComponent<Rigidbody>().velocity.magnitude;
         chatacterCh.AngleStartForce = angleForce;

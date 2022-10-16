@@ -59,7 +59,6 @@ public class ForceController : MonoBehaviour
             arrowMagnitudeAngleForce.transform.eulerAngles = new Vector3(0, 0, Mathf.PingPong(magnitudeAngleForce, 1) * 90);
             yield return null;
         }
-        print(sliderMagnitudePowerForce.value + "   " + arrowMagnitudeAngleForce.transform.eulerAngles.z / 90);
         onChoiceForceFinished?.Invoke(sliderMagnitudePowerForce.value, arrowMagnitudeAngleForce.transform.eulerAngles.z / 90);
     }
 }
