@@ -3,16 +3,15 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class ForceController : MonoBehaviour
 {
-    [SerializeField] private TMP_Text magnitudePowerForceText;
-    [SerializeField] private TMP_Text magnitudeAngleForceText;
+    [SerializeField] private Slider sliderMagnitudePowerForce;
+    [SerializeField] private GameObject arrowMagnitudeAngleForce;
     [SerializeField] private float _factorChanges = 1;
     public UnityEvent<float, float> onChoiceForceFinished;
     private InputController _inputControler;
-    private float _magnitudePowerForce;
-    private float _magnitudeAngleForce;
     private bool _isBanedCoroutineSelectForce;
     private bool _isPausedSelectForce;
 
@@ -31,23 +30,23 @@ public class ForceController : MonoBehaviour
 
     public void ResetPower()
     {
-        _magnitudePowerForce = 0;
-        _magnitudeAngleForce = 0;
-        magnitudePowerForceText.text = "0";
-        magnitudeAngleForceText.text = "0";
+        sliderMagnitudePowerForce.value = 0;
+        arrowMagnitudeAngleForce.transform.rotation = Quaternion.identity;
         _isBanedCoroutineSelectForce = false;
         _isPausedSelectForce = false;
         StopCoroutine("SelectForce");
     }
 
     private IEnumerator SelectForce()
-    { 
+    {
+        var magnitudePowerForce = 0f;
+        var magnitudeAngleForce = 0f;
         _isBanedCoroutineSelectForce = true;
         while (!_inputControler.TouchUpForSelectForce)
         {
             if (_isPausedSelectForce) yield return null;
-            _magnitudePowerForce += Time.deltaTime * _factorChanges;
-            magnitudePowerForceText.text = Mathf.PingPong(_magnitudePowerForce, 1).ToString();
+            magnitudePowerForce += Time.deltaTime * _factorChanges;
+            sliderMagnitudePowerForce.value = Mathf.PingPong(magnitudePowerForce, 1);
             yield return null;
         }
 
@@ -56,10 +55,11 @@ public class ForceController : MonoBehaviour
         while (!_inputControler.TouchUpForSelectForce)
         {
             if (_isPausedSelectForce) yield return null;
-            _magnitudeAngleForce += Time.deltaTime * _factorChanges;
-            magnitudeAngleForceText.text = Mathf.PingPong(_magnitudeAngleForce, 1).ToString();
+            magnitudeAngleForce += Time.deltaTime * _factorChanges;
+            arrowMagnitudeAngleForce.transform.eulerAngles = new Vector3(0, 0, Mathf.PingPong(magnitudeAngleForce, 1) * 90);
             yield return null;
         }
-        onChoiceForceFinished?.Invoke(_magnitudePowerForce, _magnitudeAngleForce);
+        print(sliderMagnitudePowerForce.value + "   " + arrowMagnitudeAngleForce.transform.eulerAngles.z / 90);
+        onChoiceForceFinished?.Invoke(sliderMagnitudePowerForce.value, arrowMagnitudeAngleForce.transform.eulerAngles.z / 90);
     }
 }
