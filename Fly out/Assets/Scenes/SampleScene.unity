@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 705507994}
+  m_Sun: {fileID: 0}
   m_IndirectSpecularColor: {r: 0.10896074, g: 0.1564475, b: 0.3013565, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
@@ -5144,6 +5144,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1844938457}
+        m_TargetAssemblyTypeName: CreateManager, Assembly-CSharp
+        m_MethodName: CreateLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   onPauseGame:
     m_PersistentCalls:
       m_Calls:
@@ -5525,6 +5537,18 @@ MonoBehaviour:
       - m_Target: {fileID: 939692379}
         m_TargetAssemblyTypeName: ToxicFamilyGames.AdsBrowser.YandexSDK, Assembly-CSharp
         m_MethodName: ShowInter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1844938457}
+        m_TargetAssemblyTypeName: CreateManager, Assembly-CSharp
+        m_MethodName: CreateLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6041,7 +6065,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &674023073
 GameObject:
@@ -6664,11 +6688,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 697666815}
   m_CullTransparentMesh: 1
---- !u!108 &705507994 stripped
-Light:
-  m_CorrespondingSourceObject: {fileID: 223060229183020789, guid: 712dd32a827ef0348aebda7445cdbd4a, type: 3}
-  m_PrefabInstance: {fileID: 223060228478184559}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &744467872
 GameObject:
   m_ObjectHideFlags: 0
@@ -10805,7 +10824,7 @@ RectTransform:
   m_Children:
   - {fileID: 556183603}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -17197,6 +17216,11 @@ MonoBehaviour:
   carSpawnPoint: {fileID: 343659070}
   characterSkin: {fileID: 2406542712651489834, guid: bc0a53562905e0b43866a329c449ad44, type: 3}
   offsetSpawnCharacter: {x: 0, y: 2, z: 2.5}
+  levelsPrefabs:
+  - {fileID: 884762285522977268, guid: 712dd32a827ef0348aebda7445cdbd4a, type: 3}
+  - {fileID: 4221948241034991639, guid: 87f2ce1099782a9419ee470c3f8501c1, type: 3}
+  - {fileID: 8500122772443054690, guid: a6ec7b02b7a50534ba140287a47a14a1, type: 3}
+  - {fileID: 6531140115356770121, guid: d6e7572b0c77ca64cb982bd57451c3ce, type: 3}
 --- !u!4 &1844938458
 Transform:
   m_ObjectHideFlags: 0
@@ -19365,63 +19389,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2142559696}
   m_CullTransparentMesh: 1
---- !u!1001 &223060228478184559
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 884762285522977268, guid: 712dd32a827ef0348aebda7445cdbd4a, type: 3}
-      propertyPath: m_Name
-      value: Map
-      objectReference: {fileID: 0}
-    - target: {fileID: 884762285522977269, guid: 712dd32a827ef0348aebda7445cdbd4a, type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 884762285522977269, guid: 712dd32a827ef0348aebda7445cdbd4a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 18.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 884762285522977269, guid: 712dd32a827ef0348aebda7445cdbd4a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.0049972534
-      objectReference: {fileID: 0}
-    - target: {fileID: 884762285522977269, guid: 712dd32a827ef0348aebda7445cdbd4a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -25.69
-      objectReference: {fileID: 0}
-    - target: {fileID: 884762285522977269, guid: 712dd32a827ef0348aebda7445cdbd4a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 884762285522977269, guid: 712dd32a827ef0348aebda7445cdbd4a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 884762285522977269, guid: 712dd32a827ef0348aebda7445cdbd4a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 884762285522977269, guid: 712dd32a827ef0348aebda7445cdbd4a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 884762285522977269, guid: 712dd32a827ef0348aebda7445cdbd4a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 884762285522977269, guid: 712dd32a827ef0348aebda7445cdbd4a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 884762285522977269, guid: 712dd32a827ef0348aebda7445cdbd4a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 712dd32a827ef0348aebda7445cdbd4a, type: 3}
 --- !u!1 &9038700623338104492
 GameObject:
   m_ObjectHideFlags: 0

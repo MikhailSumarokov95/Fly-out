@@ -11,6 +11,8 @@ public class CreateManager : MonoBehaviour, IShoper
     [SerializeField] private Transform carSpawnPoint;
     [SerializeField] private GameObject characterSkin;
     [SerializeField] private Vector3 offsetSpawnCharacter = new Vector3(0, 0, 4f);
+    [SerializeField] private GameObject[] levelsPrefabs;
+    private GameObject _currentLevel;
     private GameObject _carSkin;
     private GameObject _car;
     private List<GameObject> _character;
@@ -18,6 +20,13 @@ public class CreateManager : MonoBehaviour, IShoper
     private void Start()
     {
         _character = new List<GameObject>();
+    }
+
+    public void CreateLevel()
+    {
+        if (_currentLevel != null) Destroy(_currentLevel);
+        var selectedLevel = levelsPrefabs[Random.Range(0, levelsPrefabs.Length - 1)];
+        _currentLevel = Instantiate(selectedLevel, selectedLevel.transform.position, selectedLevel.transform.rotation);
     }
 
     public void CreateCar()
