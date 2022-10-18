@@ -18,6 +18,7 @@ public class CharacterPlayer : MonoBehaviour
     private bool _isPushed;
     private bool _isBannedPushing = true;
     private InputController _inputController;
+    private bool _isStartedDelayPushCoroutine;
     readonly float _delayAfterCounting = 1f;
 
     public float PowerStartForce { get; set; }
@@ -42,7 +43,9 @@ public class CharacterPlayer : MonoBehaviour
             _leaderBoard.StartLeaderBoard(_scoreTarget, false);
             GetComponent<CharacterPlayer>().enabled = false;
         }
-        if (!_isPushed) Push(new Vector2(_inputController.Horizontal, _inputController.Vertical).normalized);
+        if (_inputController.Horizontal == 0 && _inputController.Vertical == 0) _isBannedPushing = false;
+        if (!_isPushed && !_isStartedDelayPushCoroutine && !_isBannedPushing &&
+            (_inputController.Horizontal != 0 || _inputController.Vertical != 0)) StartCoroutine("DelayPush");
     }
 
     private void FlyOutCar()
@@ -60,13 +63,8 @@ public class CharacterPlayer : MonoBehaviour
 
     private void Push(Vector2 direction)
     {
-        if (_isBannedPushing)
-        {
-            _isBannedPushing = !(direction.magnitude == 0);
-            return;
-        }
         _characterPlayerRB.AddForce((Vector3)direction * factorForceTaxiing);
-        _isPushed = direction.magnitude != 0;
+        _isPushed = true;
     }
 
     private void OnCharacterCrashed()
@@ -75,6 +73,14 @@ public class CharacterPlayer : MonoBehaviour
         _isCrashedWithCollision = true;
         var applauseSoundPlaying = Instantiate(ApplauseSound);
         Destroy(applauseSoundPlaying, applauseSoundPlaying.GetComponent<AudioSource>().clip.length);
+    }
+
+    private IEnumerator DelayPush()
+    {
+        _isStartedDelayPushCoroutine = true;
+        yield return new WaitForSeconds(0.2f);
+        Push(new Vector2(_inputController.Horizontal, _inputController.Vertical).normalized);
+        _isStartedDelayPushCoroutine = false;
     }
 
     public void OnCollisionEnter(Collision collision)
