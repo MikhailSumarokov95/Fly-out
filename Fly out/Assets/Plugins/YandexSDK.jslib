@@ -1,34 +1,30 @@
-mergeInto(LibraryManager.library, {
-
-	Autorization: function() {
-		autorization();
-	},
-
-	ShowInterAd: function() {
-		showInterAd();
+var YandexSDK = {
+	Authorization: function(scopes, photoSize) {
+		authorization(
+			scopes, 
+			UTF8ToString(photoSize)
+		);
 	},
 	
-	ShowRewardedAd: function() {
-		showRewardAd();
-	},
-
-	ActivityRTB: function(state)
-	{
-		activityRTB(state);
+	InitPlayer: function(scopes) {
+		initPlayer(scopes);
 	},
 	
-	RenderRTB: function()
-	{
-		renderRTB();
+	SetLeaderboardScore: function(score) {
+		setLeaderboardScore(score);
 	},
 	
-	RecalculateRTB: function(_width, _height, _left, _top)
-	{
-		recalculateRTB(
-			UTF8ToString(_width),
-			UTF8ToString(_height),
-			UTF8ToString(_left),
-			UTF8ToString(_top));
-	}
+	ShowInterstitial: function() {
+		showInterstitial();
+	},
+	
+	ShowRewarded: function(id) {
+		showRewarded(id);
+	},
 
-});
+	IsMobile: function() {
+		return Module.SystemInfo.mobile;
+	} 
+};
+
+mergeInto(LibraryManager.library, YandexSDK);

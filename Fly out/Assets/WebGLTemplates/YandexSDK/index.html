@@ -6,25 +6,10 @@
     <title>{{{ PRODUCT_NAME }}}</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
-
-	<!-- Yandex.SDK -->
+	
+	<!-- Yandex Games SDK -->
 	<script src="https://yandex.ru/games/sdk/v2"></script>
 	
-#if RTB_ID
-	<!-- Yandex.RTB -->
-    <script>window.yaContextCb=window.yaContextCb||[]</script>
-    <script src="https://yandex.ru/ads/system/context.js" async></script>
-	
-	<style>
-        #RTB {
-			position: fixed;
-            display: none;
-        }
-        #RTB.show {
-            display: block;
-        }
-    </style>
-#endif
   </head>
   <style> body { overflow: hidden; } </style>
   <body>
@@ -37,48 +22,6 @@
         </div>
       </div>
     </div>
-#if RTB_ID
-	<div id = "RTB">
-        <div id="yandex_rtb_{{{ RTB_ID }}}"></div>
-        <script>
-          const rbt = document.querySelector('#RTB');
-
-          function renderRTB()
-          {
-            try{
-              window.yaContextCb.push(()=>{
-                Ya.Context.AdvManager.render({
-                  renderTo: 'yandex_rtb_{{{  RTB_ID  }}}',
-                  blockId: '{{{  RTB_ID  }}}',
-			      onRender: (data) => { console.log(data.product); }
-                })
-              })
-			  console.info('Banner loaded');
-            }
-            catch{
-              console.info('RTB Crash!');
-            }
-          }
-
-          function activityRTB(state){
-            if (state){
-              rbt.classList.add('show');
-            }
-            else{
-              rbt.classList.remove('show');
-            }
-          }
-
-          function recalculateRTB(_width, _height, _left, _top)
-          {
-            document.getElementById('RTB').style.width = _width;
-            document.getElementById('RTB').style.height = _height; 
-            document.getElementById('RTB').style.left = _left;
-            document.getElementById('RTB').style.top = _top;
-          }
-        </script>
-    </div>
-#endif
     <script>
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
@@ -102,21 +45,8 @@
         productName: "{{{ PRODUCT_NAME }}}",
         productVersion: "{{{ PRODUCT_VERSION }}}",
       };
-
-      // By default Unity keeps WebGL canvas render target size matched with
-      // the DOM size of the canvas element (scaled by window.devicePixelRatio)
-      // Set this to false if you want to decouple this synchronization from
-      // happening inside the engine, and you would instead like to size up
-      // the canvas DOM size and WebGL render target sizes yourself.
-      // config.matchWebGLToCanvasSize = false;
-
+	  
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        // Mobile device style: fill the whole browser client area with the game canvas:
-
-        var meta = document.createElement('meta');
-        meta.name = 'viewport';
-        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
-        document.getElementsByTagName('head')[0].appendChild(meta);
         container.className = "unity-mobile";
       }
       
@@ -143,61 +73,89 @@
 	
 	<script type="text/javascript">
 	  var player;
-	  var ysdk;
 	  var lb;
 
 	  YaGames.init({
 		adv: {
 		  onAdvClose: wasShown => {
-			console.info('adv closed!', ysdk.environment.i18n.lang);
+			console.info('adv closed!');
 		  }
 		}
-	  }).then(sdk => {
-		  ysdk = sdk;
-		  ysdk.adv.showFullscreenAdv({ callbacks: {} });
+	  }).then(ysdk => {
+		  window.ysdk = ysdk;
+		  ysdk.getLeaderboards()
+			.then(_lb => lb = _lb.getLeaderboardDescription('MainLeaderboard'))
+			.then(res => console.log(res));
+		  showInterstitial();
 		});
-	  
-	  function initPlayer() {
-		return ysdk.getPlayer().then(_player => {
-		  player = _player;
-		  
-		  return player;
-	    });
+	
+	  function setLeaderboardScore(score) {
+		lb.setLeaderboardScore('MainLeaderboard', score);
+	  }
+	
+	  function initPlayer(_scopes) {
+		return ysdk.getPlayer({ scopes: _scopes }).then(_player => {
+			player = _player;
+			
+			return player;
+		});
 	  }
 	  
-	  function autorization() {
-		initPlayer().then(_player => {
+	  function authorization(scopes, photoSize) {
+		initPlayer(scopes).then(_player => {
 			if (_player.getMode() === 'lite') {
-				console.log('Игрок не авторизован!');
-				ysdk.auth.openAuthDialog().then(() => {
-					initPlayer().catch(err => {
-						console.log('Ошибка авторизации пользователя!');
+				authorizationFailed();
+				if (scopes) {
+					ysdk.auth.openAuthDialog().then(() => {
+						initPlayer(scopes).then(player => {
+							authorizationPassed(player.getUniqueID(), player.getName(), "\"" + player.getPhoto(photoSize) + "\"");
+						}).catch(err => {
+							authorizationFailed();
+						});
+					}).catch(() => {
+						authorizationFailed();
 					});
-				}).catch(() => {
-					console.log('Игрок не авторизован!');
-				});
+				}
+			} else {
+				authorizationPassed(_player.getUniqueID(), _player.getName(), null);
 			}
-		});
+        }).catch(err => {
+          authorizationFailed();
+        });
+	  }
+		
+	  function authorizationPassed(id, name, photoURL) {
+		unityInstance.SendMessage('YandexSDK', 'OnAuthorizationPassed', "{\"id\":\"" + id + "\",\"name\":\"" + name + "\",\"photoURL\":" + photoURL + "}");
 	  }
 	  
-	  function showInterAd() {
-		ysdk.adv.showFullscreenAdv({ callbacks: {} })
+	  function authorizationFailed() {
+		unityInstance.SendMessage('YandexSDK', 'OnAuthorizationFailed');
+	  }
+	  
+	  function showInterstitial() {
+		ysdk.adv.showFullscreenAdv({ 
+		  callbacks: {
+		    onOpen: () => {
+			  unityInstance.SendMessage('YandexSDK', 'OnOpen');
+			},
+			onClose: () => {
+			  unityInstance.SendMessage('YandexSDK', 'OnClose');
+			}
+		  } 
+		})
 	  }
 
-	  function showRewardAd() {
+	  function showRewarded(id) {
 		ysdk.adv.showRewardedVideo({
 		  callbacks: {
 			onOpen: () => {
 			  unityInstance.SendMessage('YandexSDK', 'OnOpen');
 			},
 			onRewarded: () => {
-			  unityInstance.SendMessage('YandexSDK', 'OnRewarded');
+			  unityInstance.SendMessage('YandexSDK', 'OnRewarded', id);
 			},
 			onClose: () => {
 			  unityInstance.SendMessage('YandexSDK', 'OnClose');
-			}, 
-			onError: (e) => {
-			  console.log('Error while open video ad:', e);
 			}
 		  }
 		})

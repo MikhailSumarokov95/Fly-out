@@ -73,8 +73,6 @@ namespace ToxicFamilyGames.MenuEditor
             bool isBuy = IsBuySelectedItem;
             selectButton.SetActive(isBuy);
             buyButton.SetActive(!isBuy);
-            if (!isBuy)
-            buyButton.transform.GetChild(0).GetComponent<Text>()?.SetValue(items[indexShowingItem].price);
         }
 
         [ContextMenu("DestroyItem")]

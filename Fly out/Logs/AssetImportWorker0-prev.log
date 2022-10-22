@@ -15,7 +15,7 @@ C:/Users/ykpon/Desktop/Unity/Fly-out/Fly out
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-54331
+59972
 Successfully changed project path to: C:/Users/ykpon/Desktop/Unity/Fly-out/Fly out
 C:/Users/ykpon/Desktop/Unity/Fly-out/Fly out
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ C:/Users/ykpon/Desktop/Unity/Fly-out/Fly out
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 155.92 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 172.40 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.7f1 (24e8595d6d43)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/Resources/UnitySubsystems
@@ -64,47 +64,834 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56584
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56880
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.458238 seconds.
+Registered in 0.019051 seconds.
 Native extension for WindowsStandalone target not found
+[usbmuxd] Start listen thread
+[usbmuxd] Listen thread started
+Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 155.27 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 157.50 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  8.456 seconds
+- Completed reload, in  1.179 seconds
 Domain Reload Profiling:
-	ReloadAssembly (8457ms)
-		BeginReloadAssembly (5835ms)
+	ReloadAssembly (1180ms)
+		BeginReloadAssembly (138ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (1755ms)
-			LoadAssemblies (5832ms)
+			CreateAndSetChildDomain (2ms)
+		EndReloadAssembly (845ms)
+			LoadAssemblies (135ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (1050ms)
+			SetupTypeCache (188ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (52ms)
-			SetupLoadedEditorAssemblies (553ms)
+			RebuildScriptCaches (48ms)
+			SetupLoadedEditorAssemblies (517ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (121ms)
+				InitializePlatformSupportModulesInManaged (119ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (155ms)
+				RefreshPlugins (158ms)
 				BeforeProcessingInitializeOnLoad (2ms)
-				ProcessInitializeOnLoadAttributes (183ms)
-				ProcessInitializeOnLoadMethodAttributes (91ms)
+				ProcessInitializeOnLoadAttributes (162ms)
+				ProcessInitializeOnLoadMethodAttributes (76ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.011255 seconds.
-Android Extension - Scanning For ADB Devices 5394 ms
+Registered in 0.013241 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\ykpon\Desktop\Unity\Fly-out\Fly out\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ykpon\Desktop\Unity\Fly-out\Fly out\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.77 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Package Manager log level set to [2]
+Mono: successfully reloaded assembly
+- Completed reload, in  2.668 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2670ms)
+		BeginReloadAssembly (385ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (16ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (162ms)
+		EndReloadAssembly (2057ms)
+			LoadAssemblies (220ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (543ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (111ms)
+			SetupLoadedEditorAssemblies (1142ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (49ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (190ms)
+				ProcessInitializeOnLoadAttributes (592ms)
+				ProcessInitializeOnLoadMethodAttributes (289ms)
+				AfterProcessingInitializeOnLoad (19ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Shader 'RealCar/RealCarGlass': fallback shader 'Transparent' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.12 seconds
+Refreshing native plugins compatible for Editor in 2.00 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4162 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 71 unused Assets / (60.9 KB). Loaded Objects now: 4593.
+Memory consumption went from 143.7 MB to 143.6 MB.
+Total: 12.734700 ms (FindLiveObjects: 1.185400 ms CreateObjectMapping: 0.449300 ms MarkObjects: 10.832100 ms  DeleteObjects: 0.264600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 3755.539695 seconds.
+  path: Assets/Prefabs/Target.prefab
+  artifactKey: Guid(a1cb76ad02b5d7e4c8ee9b4e8a733bf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Target.prefab using Guid(a1cb76ad02b5d7e4c8ee9b4e8a733bf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '305445d96d5756ae331429a8e513b896') in 0.462284 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.721771 seconds.
+  path: Assets/Materials/fita_80.mat
+  artifactKey: Guid(4cc4cf3d1b4c9e2439fe762e8b936850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/fita_80.mat using Guid(4cc4cf3d1b4c9e2439fe762e8b936850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe275542097cb18a48b7d0c45a6b7ee7') in 0.086544 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.219965 seconds.
+  path: Assets/SimpleGridShader/GridMat.mat
+  artifactKey: Guid(0cc192ab7f73fcd45befe7c501426515) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SimpleGridShader/GridMat.mat using Guid(0cc192ab7f73fcd45befe7c501426515) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05f64a64c3bd01151ae140cfd038a8cc') in 0.128939 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.050079 seconds.
+  path: Assets/Sound/Driver.wav
+  artifactKey: Guid(bb6882799866eb6448a5d45c65a3ffa8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sound/Driver.wav using Guid(bb6882799866eb6448a5d45c65a3ffa8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bcdde0454f4f1d5c03901bc9a288969') in 0.109897 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/Sound/Steklo.wav
+  artifactKey: Guid(a5547e8544b990e42b3253fa0e1902fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sound/Steklo.wav using Guid(a5547e8544b990e42b3253fa0e1902fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df93829389cb00595924990a14998922') in 0.036628 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Sound/People.wav
+  artifactKey: Guid(ac7a6b82c5b255b4ebe77a3ced2d54ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sound/People.wav using Guid(ac7a6b82c5b255b4ebe77a3ced2d54ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '346b20be838124459989705e580d908c') in 0.036553 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/Sound/Fon.wav
+  artifactKey: Guid(48e6f3a51d1f0aa4388f2eb096e94d0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sound/Fon.wav using Guid(48e6f3a51d1f0aa4388f2eb096e94d0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71d99f8029291cf1f6d181b9b090baad') in 0.044020 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000062 seconds.
+  path: Assets/Sound/Fon2.wav
+  artifactKey: Guid(7a897331f05bd02448ba9df381d3fac2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sound/Fon2.wav using Guid(7a897331f05bd02448ba9df381d3fac2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73f4c687fc39ae3cc28bfde7b4710111') in 0.034403 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 21.262238 seconds.
+  path: Assets/WebGLTemplates/YandexSDK/index.html
+  artifactKey: Guid(ca51371d99e5854459484a1571832c31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/WebGLTemplates/YandexSDK/index.html using Guid(ca51371d99e5854459484a1571832c31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7989c9dbc832f129dbdb76add0ba73a9') in 0.022261 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.687812 seconds.
+  path: Assets/WebGLTemplates/YandexSDK/TemplateData
+  artifactKey: Guid(7d20b24f984a3c7469723cbcbdbb0402) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/WebGLTemplates/YandexSDK/TemplateData using Guid(7d20b24f984a3c7469723cbcbdbb0402) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '039467b1502aaba816c0425d55ffd4dc') in 0.013104 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.259225 seconds.
+  path: Assets/WebGLTemplates/YandexSDK
+  artifactKey: Guid(c43ad216ce9854447a479fa601dec58d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/WebGLTemplates/YandexSDK using Guid(c43ad216ce9854447a479fa601dec58d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa0d3bb8d9eebb3f54bde062301ce7a3') in 0.014571 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.419010 seconds.
+  path: Assets/WebGLTemplates/YandexSDK/TemplateData/progress-bar-full-light.png
+  artifactKey: Guid(d0ce5a470a655a64e9315ef20de5b335) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/WebGLTemplates/YandexSDK/TemplateData/progress-bar-full-light.png using Guid(d0ce5a470a655a64e9315ef20de5b335) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64b96f0ab160d19244b4304bc3324913') in 0.056093 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.428499 seconds.
+  path: Assets/WebGLTemplates/YandexSDK/TemplateData/progress-bar-full-dark.png
+  artifactKey: Guid(3e3215da4048cdc45b8041994bb91405) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/WebGLTemplates/YandexSDK/TemplateData/progress-bar-full-dark.png using Guid(3e3215da4048cdc45b8041994bb91405) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a54bc889166a2c6eef6d51f9d2a7f53') in 0.015326 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3953.720331 seconds.
+  path: Assets/ToxicFamilyGames/MenuEditor/Prefabs/LanguageController.prefab
+  artifactKey: Guid(1c6cfc5737b2b7846b984cf12d6f26fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ToxicFamilyGames/MenuEditor/Prefabs/LanguageController.prefab using Guid(1c6cfc5737b2b7846b984cf12d6f26fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '042b83f33803406da13f794ec420220e') in 0.020231 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 55.667049 seconds.
+  path: Assets/Scripts/GameObject
+  artifactKey: Guid(b1f3948bae10d9542913f681ce76f495) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GameObject using Guid(b1f3948bae10d9542913f681ce76f495) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d58be15343749660017501f6683e475') in 0.015366 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.326061 seconds.
+  path: Assets/Scripts/Controllers
+  artifactKey: Guid(35d6515ff35e7a547989cc2ae4110978) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Controllers using Guid(35d6515ff35e7a547989cc2ae4110978) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f0be1968f82b9e6c144d972b6cdb846') in 0.023660 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.444793 seconds.
+  path: Assets/Scripts/Controllers/ForceController.cs
+  artifactKey: Guid(f48499f34d7d4e5428ee1116906cd496) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Controllers/ForceController.cs using Guid(f48499f34d7d4e5428ee1116906cd496) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d1feaed199a415aa69674c7e980f90b') in 0.161521 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.041171 seconds.
+  path: Assets/Scripts/Controllers/InputController.cs
+  artifactKey: Guid(8dd5cc1f742ea3f4bb5ec690ec804aa9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Controllers/InputController.cs using Guid(8dd5cc1f742ea3f4bb5ec690ec804aa9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '687bd760e1283ac38f649e3a0659dd74') in 0.015120 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 60.370546 seconds.
+  path: Assets/Scripts/Controllers/InputController.cs
+  artifactKey: Guid(8dd5cc1f742ea3f4bb5ec690ec804aa9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Controllers/InputController.cs using Guid(8dd5cc1f742ea3f4bb5ec690ec804aa9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '057f4e67affa74a312bbbbaa091b624b') in 0.010566 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.340095 seconds.
+  path: Assets/Scripts/Controllers/InputController.cs
+  artifactKey: Guid(8dd5cc1f742ea3f4bb5ec690ec804aa9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Controllers/InputController.cs using Guid(8dd5cc1f742ea3f4bb5ec690ec804aa9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be4f402fdc4799684f673dc602473abe') in 0.008709 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 55.378461 seconds.
+  path: Assets/Scripts/Controllers/InputController.cs
+  artifactKey: Guid(8dd5cc1f742ea3f4bb5ec690ec804aa9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Controllers/InputController.cs using Guid(8dd5cc1f742ea3f4bb5ec690ec804aa9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a7e7977241902058e318e658967f7de') in 0.006666 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.104441 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\ykpon\Desktop\Unity\Fly-out\Fly out\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ykpon\Desktop\Unity\Fly-out\Fly out\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.51 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  7.802 seconds
+Domain Reload Profiling:
+	ReloadAssembly (7830ms)
+		BeginReloadAssembly (4778ms)
+			ExecutionOrderSort (1ms)
+			DisableScriptedObjects (247ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (1ms)
+			CreateAndSetChildDomain (1903ms)
+		EndReloadAssembly (2780ms)
+			LoadAssemblies (1652ms)
+			RebuildTransferFunctionScriptingTraits (14ms)
+			SetupTypeCache (718ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (102ms)
+			SetupLoadedEditorAssemblies (942ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (72ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (3ms)
+				BeforeProcessingInitializeOnLoad (147ms)
+				ProcessInitializeOnLoadAttributes (408ms)
+				ProcessInitializeOnLoadMethodAttributes (295ms)
+				AfterProcessingInitializeOnLoad (16ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
+Platform modules already initialized, skipping
+Shader 'RealCar/RealCarGlass': fallback shader 'Transparent' not found
+Refreshing native plugins compatible for Editor in 105.79 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4133 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 55 unused Assets / (25.6 KB). Loaded Objects now: 4638.
+Memory consumption went from 146.3 MB to 146.3 MB.
+Total: 48.824200 ms (FindLiveObjects: 2.434000 ms CreateObjectMapping: 0.647700 ms MarkObjects: 44.276300 ms  DeleteObjects: 1.449000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011935 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\ykpon\Desktop\Unity\Fly-out\Fly out\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ykpon\Desktop\Unity\Fly-out\Fly out\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.92 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.058 seconds
+Domain Reload Profiling:
+	ReloadAssembly (3059ms)
+		BeginReloadAssembly (560ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (15ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (83ms)
+		EndReloadAssembly (2279ms)
+			LoadAssemblies (734ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (602ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (89ms)
+			SetupLoadedEditorAssemblies (1039ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (72ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (197ms)
+				ProcessInitializeOnLoadAttributes (444ms)
+				ProcessInitializeOnLoadMethodAttributes (306ms)
+				AfterProcessingInitializeOnLoad (17ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (13ms)
+Platform modules already initialized, skipping
+Shader 'RealCar/RealCarGlass': fallback shader 'Transparent' not found
+Refreshing native plugins compatible for Editor in 30.19 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4133 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 55 unused Assets / (25.8 KB). Loaded Objects now: 4641.
+Memory consumption went from 146.3 MB to 146.3 MB.
+Total: 14.890400 ms (FindLiveObjects: 0.885700 ms CreateObjectMapping: 0.238100 ms MarkObjects: 13.624300 ms  DeleteObjects: 0.140300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 568.660806 seconds.
+  path: Assets/ToxicFamilyGames/TutorialEditor/Prefabs/ArrowHand.prefab
+  artifactKey: Guid(bf5659d1f55d2b144b4db64533da5b0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ToxicFamilyGames/TutorialEditor/Prefabs/ArrowHand.prefab using Guid(bf5659d1f55d2b144b4db64533da5b0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5db9440bd83ca0a412e2f21bd9c0f117') in 0.422800 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/ToxicFamilyGames/TutorialEditor/Prefabs/FollowHand.prefab
+  artifactKey: Guid(7f8d3fd90012c0543ab51d8fe610ab8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ToxicFamilyGames/TutorialEditor/Prefabs/FollowHand.prefab using Guid(7f8d3fd90012c0543ab51d8fe610ab8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f78521df076aafb1acd1c201ca238bb') in 0.040664 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/ToxicFamilyGames/TutorialEditor/Prefabs/Banner.prefab
+  artifactKey: Guid(f714cdef1e0aaff41b58c1404b20118a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ToxicFamilyGames/TutorialEditor/Prefabs/Banner.prefab using Guid(f714cdef1e0aaff41b58c1404b20118a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da44ab4ab4402c20502747cdc5b4d1d5') in 0.231723 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.022168 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\ykpon\Desktop\Unity\Fly-out\Fly out\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ykpon\Desktop\Unity\Fly-out\Fly out\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.78 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.802 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2804ms)
+		BeginReloadAssembly (319ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (23ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (80ms)
+		EndReloadAssembly (2245ms)
+			LoadAssemblies (222ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (720ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (103ms)
+			SetupLoadedEditorAssemblies (1090ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (80ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (3ms)
+				BeforeProcessingInitializeOnLoad (179ms)
+				ProcessInitializeOnLoadAttributes (467ms)
+				ProcessInitializeOnLoadMethodAttributes (340ms)
+				AfterProcessingInitializeOnLoad (20ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (15ms)
+Platform modules already initialized, skipping
+Shader 'RealCar/RealCarGlass': fallback shader 'Transparent' not found
+Refreshing native plugins compatible for Editor in 19.14 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4133 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 56 unused Assets / (26.5 KB). Loaded Objects now: 4644.
+Memory consumption went from 146.4 MB to 146.4 MB.
+Total: 14.256500 ms (FindLiveObjects: 0.849400 ms CreateObjectMapping: 0.269600 ms MarkObjects: 12.936900 ms  DeleteObjects: 0.198200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011710 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\ykpon\Desktop\Unity\Fly-out\Fly out\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ykpon\Desktop\Unity\Fly-out\Fly out\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 16.72 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.516 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2517ms)
+		BeginReloadAssembly (353ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (47ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (84ms)
+		EndReloadAssembly (1958ms)
+			LoadAssemblies (200ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (656ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (108ms)
+			SetupLoadedEditorAssemblies (905ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (71ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (17ms)
+				BeforeProcessingInitializeOnLoad (173ms)
+				ProcessInitializeOnLoadAttributes (367ms)
+				ProcessInitializeOnLoadMethodAttributes (259ms)
+				AfterProcessingInitializeOnLoad (16ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
+Platform modules already initialized, skipping
+Shader 'RealCar/RealCarGlass': fallback shader 'Transparent' not found
+Refreshing native plugins compatible for Editor in 10.26 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4133 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 55 unused Assets / (25.7 KB). Loaded Objects now: 4647.
+Memory consumption went from 146.4 MB to 146.4 MB.
+Total: 13.044800 ms (FindLiveObjects: 0.802500 ms CreateObjectMapping: 0.213900 ms MarkObjects: 11.947800 ms  DeleteObjects: 0.078600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011482 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\ykpon\Desktop\Unity\Fly-out\Fly out\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ykpon\Desktop\Unity\Fly-out\Fly out\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.07 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.278 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2279ms)
+		BeginReloadAssembly (342ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (21ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (97ms)
+		EndReloadAssembly (1749ms)
+			LoadAssemblies (208ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (569ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (88ms)
+			SetupLoadedEditorAssemblies (819ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (59ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (139ms)
+				ProcessInitializeOnLoadAttributes (341ms)
+				ProcessInitializeOnLoadMethodAttributes (260ms)
+				AfterProcessingInitializeOnLoad (17ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
+Platform modules already initialized, skipping
+Shader 'RealCar/RealCarGlass': fallback shader 'Transparent' not found
+Refreshing native plugins compatible for Editor in 12.41 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4133 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 55 unused Assets / (25.7 KB). Loaded Objects now: 4650.
+Memory consumption went from 146.4 MB to 146.4 MB.
+Total: 25.839100 ms (FindLiveObjects: 0.861900 ms CreateObjectMapping: 0.222900 ms MarkObjects: 24.555200 ms  DeleteObjects: 0.196200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.014238 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\ykpon\Desktop\Unity\Fly-out\Fly out\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ykpon\Desktop\Unity\Fly-out\Fly out\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.12 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  7.665 seconds
+Domain Reload Profiling:
+	ReloadAssembly (7667ms)
+		BeginReloadAssembly (290ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (14ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (81ms)
+		EndReloadAssembly (6936ms)
+			LoadAssemblies (359ms)
+			RebuildTransferFunctionScriptingTraits (1ms)
+			SetupTypeCache (2106ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (115ms)
+			SetupLoadedEditorAssemblies (3764ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (255ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (208ms)
+				ProcessInitializeOnLoadAttributes (2594ms)
+				ProcessInitializeOnLoadMethodAttributes (620ms)
+				AfterProcessingInitializeOnLoad (81ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (68ms)
+Platform modules already initialized, skipping
+Shader 'RealCar/RealCarGlass': fallback shader 'Transparent' not found
+Refreshing native plugins compatible for Editor in 23.27 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4133 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 55 unused Assets / (25.7 KB). Loaded Objects now: 4653.
+Memory consumption went from 146.4 MB to 146.4 MB.
+Total: 12.914400 ms (FindLiveObjects: 0.811200 ms CreateObjectMapping: 0.221700 ms MarkObjects: 11.811000 ms  DeleteObjects: 0.068400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011713 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\ykpon\Desktop\Unity\Fly-out\Fly out\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ykpon\Desktop\Unity\Fly-out\Fly out\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.79 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.193 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2194ms)
+		BeginReloadAssembly (285ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (12ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (73ms)
+		EndReloadAssembly (1737ms)
+			LoadAssemblies (204ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (480ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (81ms)
+			SetupLoadedEditorAssemblies (916ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (60ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (140ms)
+				ProcessInitializeOnLoadAttributes (421ms)
+				ProcessInitializeOnLoadMethodAttributes (276ms)
+				AfterProcessingInitializeOnLoad (16ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (13ms)
+Platform modules already initialized, skipping
+Shader 'RealCar/RealCarGlass': fallback shader 'Transparent' not found
+Refreshing native plugins compatible for Editor in 13.06 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4133 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 55 unused Assets / (25.8 KB). Loaded Objects now: 4656.
+Memory consumption went from 146.4 MB to 146.4 MB.
+Total: 11.831100 ms (FindLiveObjects: 0.801100 ms CreateObjectMapping: 0.223400 ms MarkObjects: 10.463400 ms  DeleteObjects: 0.340800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011674 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\ykpon\Desktop\Unity\Fly-out\Fly out\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ykpon\Desktop\Unity\Fly-out\Fly out\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.98 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.563 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2564ms)
+		BeginReloadAssembly (296ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (14ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (78ms)
+		EndReloadAssembly (2037ms)
+			LoadAssemblies (226ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (634ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (102ms)
+			SetupLoadedEditorAssemblies (997ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (78ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (166ms)
+				ProcessInitializeOnLoadAttributes (422ms)
+				ProcessInitializeOnLoadMethodAttributes (310ms)
+				AfterProcessingInitializeOnLoad (18ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
+Platform modules already initialized, skipping
+Shader 'RealCar/RealCarGlass': fallback shader 'Transparent' not found
+Refreshing native plugins compatible for Editor in 11.71 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4133 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 55 unused Assets / (25.7 KB). Loaded Objects now: 4659.
+Memory consumption went from 146.4 MB to 146.4 MB.
+Total: 13.953400 ms (FindLiveObjects: 0.980200 ms CreateObjectMapping: 0.236000 ms MarkObjects: 12.563700 ms  DeleteObjects: 0.171500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012264 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\ykpon\Desktop\Unity\Fly-out\Fly out\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ykpon\Desktop\Unity\Fly-out\Fly out\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.22 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.118 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2120ms)
+		BeginReloadAssembly (255ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (14ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (73ms)
+		EndReloadAssembly (1681ms)
+			LoadAssemblies (179ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (477ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (81ms)
+			SetupLoadedEditorAssemblies (868ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (68ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (147ms)
+				ProcessInitializeOnLoadAttributes (368ms)
+				ProcessInitializeOnLoadMethodAttributes (264ms)
+				AfterProcessingInitializeOnLoad (17ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
+Platform modules already initialized, skipping
+Shader 'RealCar/RealCarGlass': fallback shader 'Transparent' not found
+Refreshing native plugins compatible for Editor in 10.85 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4133 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 55 unused Assets / (25.7 KB). Loaded Objects now: 4662.
+Memory consumption went from 146.4 MB to 146.4 MB.
+Total: 21.983800 ms (FindLiveObjects: 0.784000 ms CreateObjectMapping: 0.308800 ms MarkObjects: 11.694100 ms  DeleteObjects: 9.193800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Shader 'RealCar/RealCarGlass': fallback shader 'Transparent' not found
+Refreshing native plugins compatible for Editor in 54.82 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 55 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 55 unused Assets / (22.9 KB). Loaded Objects now: 4662.
+Memory consumption went from 64.9 MB to 64.9 MB.
+Total: 20.084800 ms (FindLiveObjects: 0.922000 ms CreateObjectMapping: 0.282500 ms MarkObjects: 18.717200 ms  DeleteObjects: 0.160400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Shader 'RealCar/RealCarGlass': fallback shader 'Transparent' not found
+Refreshing native plugins compatible for Editor in 72.00 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 55 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 55 unused Assets / (22.9 KB). Loaded Objects now: 4662.
+Memory consumption went from 64.9 MB to 64.9 MB.
+Total: 22.102200 ms (FindLiveObjects: 0.854600 ms CreateObjectMapping: 0.230000 ms MarkObjects: 15.580900 ms  DeleteObjects: 5.434700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 

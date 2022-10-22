@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using ToxicFamilyGames.YandexSDK;
 using UnityEngine;
-using ToxicFamilyGames.AdsBrowser;
 
 public class Guade : MonoBehaviour
 {
@@ -14,7 +14,7 @@ public class Guade : MonoBehaviour
 
     private void Start()
     {
-        if (YandexSDK.instance.isMobile())
+        if (AuthorizationYandex.IsMobile()) 
         {
             _guadeCar = mobileGuadeCar;
             _guadeCharacter = mobileGuadeCharacter;

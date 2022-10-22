@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using ToxicFamilyGames.AdsBrowser;
+using ToxicFamilyGames.YandexSDK;
 
 public class InputController : MonoBehaviour
 {
@@ -19,7 +19,7 @@ public class InputController : MonoBehaviour
 
     private void Start()
     {
-        _isMobile = YandexSDK.instance.isMobile();
+        _isMobile = AuthorizationYandex.IsMobile();
         _touchController = FindObjectOfType<TouchController>();
         if (_isMobile) _variableJoystick = FindObjectOfType<VariableJoystick>();
         else FindObjectOfType<VariableJoystick>().gameObject.SetActive(false);
