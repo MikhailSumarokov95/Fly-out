@@ -49,8 +49,7 @@ public class Money : MonoBehaviour
         PlayerPrefs.SetInt("money", money);
         foreach(var moneyText in moneyTexts) moneyText.text = money.ToString();
         rewardMoneyText.gameObject.SetActive(true);
-        var sign = Math.Sign(value) > 0 ? "+" : "-"; 
-        rewardMoneyText.text = sign + value.ToString();
+        rewardMoneyText.text = value.ToString();
         rewardMoneyText.color += new Color(0, 0, 0, 1);
     }
 }
